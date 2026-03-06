@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Shield -->
+  <polygon points="256,40 456,40 456,340 256,472 56,340 56,40" fill="#3498db"/>
+  <!-- Inner shield highlight -->
+  <polygon points="256,72 424,72 424,324 256,440 88,324 88,72" fill="#48a8e6"/>
+  <!-- Lock body -->
+  <rect x="202" y="246" width="108" height="86" rx="12" ry="12" fill="white"/>
+  <!-- Lock shackle -->
+  <path d="M218,246 A38,38 0 0,1 294,246" fill="none" stroke="white" stroke-width="20" stroke-linecap="round"/>
+  <!-- Keyhole circle -->
+  <circle cx="256" cy="275" r="17" fill="#3498db"/>
+  <!-- Keyhole slot -->
+  <rect x="249" y="285" width="14" height="30" fill="#3498db"/>
+</svg>

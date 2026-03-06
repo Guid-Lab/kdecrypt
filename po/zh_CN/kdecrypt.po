@@ -1,0 +1,1102 @@
+# Simplified Chinese translation for KDecrypt
+# Copyright (C) 2026 Guid
+# This file is distributed under the same license as the kdecrypt package.
+# Guid <guid@guid.pl>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdecrypt 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-06 16:02+0100\n"
+"PO-Revision-Date: 2026-03-06 14:40+0100\n"
+"Last-Translator: Guid <guid@guid.pl>\n"
+"Language-Team: Chinese (Simplified)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# encryptdialog.cpp
+#: src/encryptdialog.cpp:23
+#, kde-format
+msgid "Encrypt File"
+msgstr "加密文件"
+
+#: src/encryptdialog.cpp:28
+#, kde-format
+msgid "Recipients (public keys)"
+msgstr "收件人（公钥）"
+
+#: src/encryptdialog.cpp:31
+#, kde-format
+msgid "Select one or more recipients who will be able to decrypt the file:"
+msgstr "选择一个或多个能够解密该文件的收件人："
+
+#: src/encryptdialog.cpp:36 src/settingsdialog.cpp:39
+#, kde-format
+msgid "User ID"
+msgstr "用户 ID"
+
+#: src/encryptdialog.cpp:36 src/settingsdialog.cpp:39
+#, kde-format
+msgid "Key ID"
+msgstr "密钥 ID"
+
+#: src/encryptdialog.cpp:36 src/settingsdialog.cpp:39
+#, kde-format
+msgid "Type"
+msgstr "类型"
+
+#: src/encryptdialog.cpp:41
+#, kde-format
+msgid "Recipient keys"
+msgstr "收件人密钥"
+
+#: src/encryptdialog.cpp:46
+#, kde-format
+msgid "Your Key"
+msgstr "您的密钥"
+
+#: src/encryptdialog.cpp:49
+#, kde-format
+msgid ""
+"Select your key to encrypt the file for yourself as well. Without this, you "
+"will not be able to decrypt the file later."
+msgstr "选择您的密钥以便同时为自己加密文件。如果不选择，您将无法在以后解密该文件。"
+
+#: src/encryptdialog.cpp:55
+#, kde-format
+msgid "My key:"
+msgstr "我的密钥："
+
+#: src/encryptdialog.cpp:58
+#, kde-format
+msgid "Your encryption key"
+msgstr "您的加密密钥"
+
+#: src/encryptdialog.cpp:62
+#, kde-format
+msgid "Also sign with this key (proves you sent the file)"
+msgstr "同时使用此密钥签名（证明文件由您发送）"
+
+#: src/encryptdialog.cpp:68
+#, kde-format
+msgid "ASCII armor output (.asc)"
+msgstr "ASCII armor 输出 (.asc)"
+
+#: src/encryptdialog.cpp:70
+#, kde-format
+msgid ""
+"Output the encrypted file as ASCII text instead of binary. Useful for email."
+msgstr "将加密文件输出为 ASCII 文本而非二进制格式。适用于电子邮件发送。"
+
+#: src/encryptdialog.cpp:75
+#, kde-format
+msgid "Encrypt"
+msgstr "加密"
+
+#: src/encryptdialog.cpp:79 src/keygendialog.cpp:125 src/keygendialog.cpp:129
+#: src/keygendialog.cpp:133 src/keygendialog.cpp:137 src/mainwindow.cpp:101
+#: src/mainwindow.cpp:328 src/mainwindow.cpp:385 src/mainwindow.cpp:461
+#: src/mainwindow.cpp:476 src/mainwindow.cpp:495 src/mainwindow.cpp:507
+#: src/settingsdialog.cpp:342 src/settingsdialog.cpp:359
+#: src/settingsdialog.cpp:364 src/settingsdialog.cpp:400
+#: src/settingsdialog.cpp:405 src/settingsdialog.cpp:476
+#: src/settingsdialog.cpp:487
+#, kde-format
+msgid "Error"
+msgstr "错误"
+
+#: src/encryptdialog.cpp:79
+#, kde-format
+msgid "Select at least one recipient."
+msgstr "请至少选择一个收件人。"
+
+#: src/encryptdialog.cpp:91
+#, kde-format
+msgid "No External Recipients"
+msgstr "无外部收件人"
+
+#: src/encryptdialog.cpp:92
+#, kde-format
+msgid ""
+"No external recipients selected. The file will only be decryptable by you.\n"
+"\n"
+"Continue?"
+msgstr ""
+"未选择外部收件人。该文件将只能由您解密。\n"
+"\n"
+"是否继续？"
+
+#: src/encryptdialog.cpp:175
+#, kde-format
+msgid "(none — won't be able to decrypt)"
+msgstr "（无 — 将无法解密）"
+
+#: src/gpgengine.cpp:64
+#, kde-format
+msgid "Decryption failed: no matching secret key found."
+msgstr "解密失败：未找到匹配的私钥。"
+
+#: src/gpgengine.cpp:66
+#, kde-format
+msgid "The file was encrypted for key(s):"
+msgstr "该文件是为以下密钥加密的："
+
+#: src/gpgengine.cpp:70
+#, kde-format
+msgid ""
+"Import the corresponding private key or ask the sender to encrypt for your "
+"key."
+msgstr "请导入对应的私钥，或请求发送者使用您的密钥进行加密。"
+
+#: src/gpgengine.cpp:81 src/gpgengine.cpp:185
+#, kde-format
+msgid "File not found: %1"
+msgstr "文件未找到：%1"
+
+#: src/gpgengine.cpp:88
+#, kde-format
+msgid "Failed to create temporary file"
+msgstr "创建临时文件失败"
+
+#: src/gpgengine.cpp:112 src/gpgengine.cpp:134 src/gpgengine.cpp:221
+#: src/gpgengine.cpp:261
+#, kde-format
+msgid "Failed to start gpg"
+msgstr "启动 gpg 失败"
+
+#: src/gpgengine.cpp:145 src/gpgengine.cpp:241 src/gpgengine.cpp:268
+#, kde-format
+msgid "GPG timed out"
+msgstr "GPG 操作超时"
+
+#: src/gpgengine.cpp:167
+#, kde-format
+msgid "Failed to read decrypted output"
+msgstr "读取已解密输出失败"
+
+# keygendialog.cpp
+#: src/keygendialog.cpp:23
+#, kde-format
+msgid "Generate GPG Key"
+msgstr "生成 GPG 密钥"
+
+#: src/keygendialog.cpp:28
+#, kde-format
+msgid "Identity"
+msgstr "身份信息"
+
+#: src/keygendialog.cpp:32
+#, kde-format
+msgid "e.g. Jan Kowalski"
+msgstr "例如 张三"
+
+#: src/keygendialog.cpp:33
+#, kde-format
+msgid "Name"
+msgstr "姓名"
+
+#: src/keygendialog.cpp:34
+#, kde-format
+msgid "Name:"
+msgstr "姓名："
+
+#: src/keygendialog.cpp:37
+#, kde-format
+msgid "e.g. jan@example.com"
+msgstr "例如 zhangsan@example.com"
+
+#: src/keygendialog.cpp:38
+#, kde-format
+msgid "Email"
+msgstr "电子邮件"
+
+#: src/keygendialog.cpp:39
+#, kde-format
+msgid "Email:"
+msgstr "电子邮件："
+
+#: src/keygendialog.cpp:42
+#, kde-format
+msgid "e.g. Work key, Personal"
+msgstr "例如 工作密钥、个人密钥"
+
+#: src/keygendialog.cpp:43
+#, kde-format
+msgid "Comment"
+msgstr "备注"
+
+#: src/keygendialog.cpp:44
+#, kde-format
+msgid "Comment:"
+msgstr "备注："
+
+#: src/keygendialog.cpp:48
+#, kde-format
+msgid "Key Parameters"
+msgstr "密钥参数"
+
+#: src/keygendialog.cpp:52
+#, kde-format
+msgid "Key type"
+msgstr "密钥类型"
+
+#: src/keygendialog.cpp:59
+#, kde-format
+msgid "Key type:"
+msgstr "密钥类型："
+
+#: src/keygendialog.cpp:62
+#, kde-format
+msgid "Key size"
+msgstr "密钥大小"
+
+#: src/keygendialog.cpp:63
+#, kde-format
+msgid "Key size:"
+msgstr "密钥大小："
+
+#: src/keygendialog.cpp:66
+#, kde-format
+msgid "Subkey type"
+msgstr "子密钥类型"
+
+#: src/keygendialog.cpp:73
+#, kde-format
+msgid "None (signing only)"
+msgstr "无（仅签名）"
+
+#: src/keygendialog.cpp:74
+#, kde-format
+msgid "Subkey type:"
+msgstr "子密钥类型："
+
+#: src/keygendialog.cpp:77
+#, kde-format
+msgid "Subkey size"
+msgstr "子密钥大小"
+
+#: src/keygendialog.cpp:78
+#, kde-format
+msgid "Subkey size:"
+msgstr "子密钥大小："
+
+#: src/keygendialog.cpp:82
+#, kde-format
+msgid "Expiration"
+msgstr "有效期"
+
+#: src/keygendialog.cpp:85 src/keygendialog.cpp:86
+#, kde-format
+msgid "No expiration"
+msgstr "永不过期"
+
+#: src/keygendialog.cpp:91
+#, kde-format
+msgid "Expiration date"
+msgstr "过期日期"
+
+#: src/keygendialog.cpp:96
+#, kde-format
+msgid "Expires:"
+msgstr "过期时间："
+
+#: src/keygendialog.cpp:100 src/keygendialog.cpp:106 src/mainwindow.cpp:569
+#, kde-format
+msgid "Passphrase"
+msgstr "密码短语"
+
+#: src/keygendialog.cpp:105
+#, kde-format
+msgid "Leave empty for no passphrase"
+msgstr "留空表示不设置密码短语"
+
+#: src/keygendialog.cpp:107
+#, kde-format
+msgid "Leave empty to create a key without passphrase protection"
+msgstr "留空以创建不受密码短语保护的密钥"
+
+#: src/keygendialog.cpp:108
+#, kde-format
+msgid "Passphrase:"
+msgstr "密码短语："
+
+#: src/keygendialog.cpp:112
+#, kde-format
+msgid "Confirm passphrase"
+msgstr "确认密码短语"
+
+#: src/keygendialog.cpp:113
+#, kde-format
+msgid "Confirm:"
+msgstr "确认："
+
+#: src/keygendialog.cpp:119
+#, kde-format
+msgid "Generate"
+msgstr "生成"
+
+#: src/keygendialog.cpp:125
+#, kde-format
+msgid "Name is required."
+msgstr "姓名为必填项。"
+
+#: src/keygendialog.cpp:129
+#, kde-format
+msgid "Email is required."
+msgstr "电子邮件为必填项。"
+
+#: src/keygendialog.cpp:133
+#, kde-format
+msgid "Please enter a valid email address."
+msgstr "请输入有效的电子邮件地址。"
+
+#: src/keygendialog.cpp:137
+#, kde-format
+msgid "Passphrases do not match."
+msgstr "两次输入的密码短语不一致。"
+
+#: src/keygendialog.cpp:176
+#, kde-format
+msgid "Fixed by curve"
+msgstr "由曲线决定"
+
+#: src/keygendialog.cpp:205
+#, kde-format
+msgid "N/A"
+msgstr "不适用"
+
+# main.cpp
+#: src/main.cpp:29 src/mainwindow.cpp:37
+#, kde-format
+msgid "KDecrypt"
+msgstr "KDecrypt"
+
+#: src/main.cpp:31
+#, kde-format
+msgid "PGP/GPG file encryption and decryption manager for KDE Plasma"
+msgstr "KDE Plasma 的 PGP/GPG 文件加密和解密管理器"
+
+#: src/main.cpp:33
+#, kde-format
+msgid "(c) 2026 Guid"
+msgstr "(c) 2026 Guid"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Guid"
+msgstr "Guid"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Lead Developer"
+msgstr "首席开发者"
+
+#: src/main.cpp:54
+#, kde-format
+msgid "Encrypted files to open"
+msgstr "要打开的加密文件"
+
+# mainwindow.cpp - headers
+#: src/mainwindow.cpp:40
+#, kde-format
+msgid "File"
+msgstr "文件"
+
+#: src/mainwindow.cpp:40
+#, kde-format
+msgid "Size"
+msgstr "大小"
+
+#: src/mainwindow.cpp:40
+#, kde-format
+msgid "Key"
+msgstr "密钥"
+
+#: src/mainwindow.cpp:40
+#, kde-format
+msgid "Decrypted at"
+msgstr "解密时间"
+
+# mainwindow.cpp - accessibility
+#: src/mainwindow.cpp:46
+#, kde-format
+msgid "Decrypted files list"
+msgstr "已解密文件列表"
+
+#: src/mainwindow.cpp:47
+#, kde-format
+msgid ""
+"List of decrypted files. Use context menu or keyboard shortcuts to open, "
+"save, or remove files."
+msgstr "已解密文件列表。使用右键菜单或键盘快捷键来打开、保存或删除文件。"
+
+# mainwindow.cpp - dialogs
+#: src/mainwindow.cpp:63
+#, kde-format
+msgid "Warning"
+msgstr "警告"
+
+#: src/mainwindow.cpp:64
+#, kde-format
+msgid "Could not open KDE Wallet. Passphrases will not be stored."
+msgstr "无法打开 KDE Wallet。密码短语将不会被存储。"
+
+#: src/mainwindow.cpp:102
+#, kde-format
+msgid ""
+"Failed to generate cryptographic key. In-memory encryption is disabled. "
+"Decrypted data will NOT be protected."
+msgstr "生成加密密钥失败。内存加密已禁用。已解密数据将不受保护。"
+
+# mainwindow.cpp - actions
+#: src/mainwindow.cpp:129
+#, kde-format
+msgid "Decrypt File..."
+msgstr "解密文件..."
+
+#: src/mainwindow.cpp:131
+#, kde-format
+msgid "Open and decrypt a PGP/GPG encrypted file (Ctrl+O)"
+msgstr "打开并解密 PGP/GPG 加密文件 (Ctrl+O)"
+
+#: src/mainwindow.cpp:134
+#, kde-format
+msgid "Encrypt File..."
+msgstr "加密文件..."
+
+#: src/mainwindow.cpp:136
+#, kde-format
+msgid "Encrypt a file for selected recipients (Ctrl+E)"
+msgstr "为选定的收件人加密文件 (Ctrl+E)"
+
+#: src/mainwindow.cpp:141
+#, kde-format
+msgid "Key Manager..."
+msgstr "密钥管理器..."
+
+#: src/mainwindow.cpp:143
+#, kde-format
+msgid "Manage GPG keys and application settings (Ctrl+K)"
+msgstr "管理 GPG 密钥和应用程序设置 (Ctrl+K)"
+
+#: src/mainwindow.cpp:148
+#, kde-format
+msgid "Switch Language..."
+msgstr "切换语言..."
+
+#: src/mainwindow.cpp:149
+#, kde-format
+msgid "Change application language"
+msgstr "更改应用程序语言"
+
+#: src/mainwindow.cpp:156
+#, kde-format
+msgid "Save Decrypted..."
+msgstr "保存已解密文件..."
+
+#: src/mainwindow.cpp:158
+#, kde-format
+msgid "Save the selected decrypted file to disk (Ctrl+S)"
+msgstr "将选定的已解密文件保存到磁盘 (Ctrl+S)"
+
+#: src/mainwindow.cpp:164
+#, kde-format
+msgid "Open with Default App"
+msgstr "使用默认应用程序打开"
+
+#: src/mainwindow.cpp:165
+#, kde-format
+msgid "Open the selected file with its default application"
+msgstr "使用默认应用程序打开选定的文件"
+
+#: src/mainwindow.cpp:171
+#, kde-format
+msgid "Remove from List"
+msgstr "从列表中移除"
+
+#: src/mainwindow.cpp:173
+#, kde-format
+msgid "Remove the selected file from the list and wipe from memory (Del)"
+msgstr "从列表中移除选定的文件并从内存中擦除 (Del)"
+
+#: src/mainwindow.cpp:179 src/mainwindow.cpp:537
+#, kde-format
+msgid "Clear All"
+msgstr "全部清除"
+
+#: src/mainwindow.cpp:180
+#, kde-format
+msgid "Remove all files from the list and wipe from memory"
+msgstr "从列表中移除所有文件并从内存中擦除"
+
+#: src/mainwindow.cpp:248
+#, kde-format
+msgid "File already open: %1"
+msgstr "文件已打开：%1"
+
+#: src/mainwindow.cpp:257 src/mainwindow.cpp:396
+#, kde-format
+msgid "Large File"
+msgstr "大文件"
+
+#: src/mainwindow.cpp:258
+#, kde-format
+msgid ""
+"This file is %1 MB. Decrypting large files may use significant memory and time.\n"
+"\n"
+"Continue?"
+msgstr ""
+"此文件大小为 %1 MB。解密大文件可能需要大量内存和时间。\n"
+"\n"
+"是否继续？"
+
+#: src/mainwindow.cpp:268
+#, kde-format
+msgid "Decryption Failed"
+msgstr "解密失败"
+
+#: src/mainwindow.cpp:274
+#, kde-format
+msgid "Import Key..."
+msgstr "导入密钥..."
+
+#: src/mainwindow.cpp:279 src/settingsdialog.cpp:223
+#, kde-format
+msgid "Import GPG Key"
+msgstr "导入 GPG 密钥"
+
+#: src/mainwindow.cpp:280 src/settingsdialog.cpp:224
+#, kde-format
+msgid "GPG Key Files (*.asc *.gpg *.pgp *.key);;All Files (*)"
+msgstr "GPG 密钥文件 (*.asc *.gpg *.pgp *.key);;所有文件 (*)"
+
+#: src/mainwindow.cpp:291 src/settingsdialog.cpp:244
+#, kde-format
+msgid "Import"
+msgstr "导入"
+
+#: src/mainwindow.cpp:292
+#, kde-format
+msgid "Key imported. Retrying decryption..."
+msgstr "密钥已导入。正在重试解密..."
+
+#: src/mainwindow.cpp:295 src/settingsdialog.cpp:236
+#: src/settingsdialog.cpp:242
+#, kde-format
+msgid "Import Failed"
+msgstr "导入失败"
+
+#: src/mainwindow.cpp:329
+#, kde-format
+msgid "Failed to store decrypted data in memory."
+msgstr "将已解密数据存储到内存失败。"
+
+#: src/mainwindow.cpp:340
+#, kde-format
+msgid "unknown"
+msgstr "未知"
+
+#: src/mainwindow.cpp:348
+#, kde-format
+msgid "Decrypted: %1"
+msgstr "已解密：%1"
+
+#: src/mainwindow.cpp:354
+#, kde-format
+msgid "Open Encrypted Files"
+msgstr "打开加密文件"
+
+#: src/mainwindow.cpp:355
+#, kde-format
+msgid "PGP Encrypted Files (*.pgp *.gpg *.asc);;All Files (*)"
+msgstr "PGP 加密文件 (*.pgp *.gpg *.asc);;所有文件 (*)"
+
+#: src/mainwindow.cpp:364
+#, kde-format
+msgid "Select File to Encrypt"
+msgstr "选择要加密的文件"
+
+#: src/mainwindow.cpp:365
+#, kde-format
+msgid "All Files (*)"
+msgstr "所有文件 (*)"
+
+#: src/mainwindow.cpp:378
+#, kde-format
+msgid "Save Encrypted File"
+msgstr "保存加密文件"
+
+#: src/mainwindow.cpp:379
+#, kde-format
+msgid "PGP Binary (*.gpg);;ASCII Armored (*.asc);;All Files (*)"
+msgstr "PGP 二进制 (*.gpg);;ASCII Armored (*.asc);;所有文件 (*)"
+
+#: src/mainwindow.cpp:386
+#, kde-format
+msgid "Output file cannot be the same as the input file."
+msgstr "输出文件不能与输入文件相同。"
+
+#: src/mainwindow.cpp:397
+#, kde-format
+msgid ""
+"This file is %1 MB. Encrypting large files may take significant time.\n"
+"\n"
+"Continue?"
+msgstr ""
+"此文件大小为 %1 MB。加密大文件可能需要较长时间。\n"
+"\n"
+"是否继续？"
+
+#: src/mainwindow.cpp:409
+#, kde-format
+msgid "Encryption Failed"
+msgstr "加密失败"
+
+#: src/mainwindow.cpp:411
+#, kde-format
+msgid "Encrypted"
+msgstr "已加密"
+
+#: src/mainwindow.cpp:412
+#, kde-format
+msgid ""
+"File encrypted successfully:\n"
+"%1"
+msgstr ""
+"文件加密成功：\n"
+"%1"
+
+#: src/mainwindow.cpp:461 src/mainwindow.cpp:495
+#, kde-format
+msgid "Failed to decrypt data from memory."
+msgstr "从内存解密数据失败。"
+
+#: src/mainwindow.cpp:476
+#, kde-format
+msgid "Failed to write temporary file."
+msgstr "写入临时文件失败。"
+
+#: src/mainwindow.cpp:488
+#, kde-format
+msgid "Save Decrypted File"
+msgstr "保存已解密文件"
+
+#: src/mainwindow.cpp:504
+#, kde-format
+msgid "Saved: %1"
+msgstr "已保存：%1"
+
+#: src/mainwindow.cpp:508
+#, kde-format
+msgid "Failed to save file: %1"
+msgstr "保存文件失败：%1"
+
+#: src/mainwindow.cpp:519
+#, kde-format
+msgid "Remove File"
+msgstr "移除文件"
+
+#: src/mainwindow.cpp:520
+#, kde-format
+msgid "Remove \"%1\" from the list and wipe from memory?"
+msgstr "从列表中移除 \"%1\" 并从内存中擦除？"
+
+#: src/mainwindow.cpp:528
+#, kde-format
+msgid "Removed: %1"
+msgstr "已移除：%1"
+
+#: src/mainwindow.cpp:538
+#, kde-format
+msgid "Remove all decrypted files from the list?"
+msgstr "是否从列表中移除所有已解密文件？"
+
+#: src/mainwindow.cpp:547
+#, kde-format
+msgid "All files cleared."
+msgstr "所有文件已清除。"
+
+#: src/mainwindow.cpp:566
+#, kde-format
+msgid "Enter passphrase for GPG key:"
+msgstr "请输入 GPG 密钥的密码短语："
+
+#: src/mainwindow.cpp:567
+#, kde-format
+msgid "Enter passphrase for GPG key %1:"
+msgstr "请输入 GPG 密钥 %1 的密码短语："
+
+#: src/mainwindow.cpp:599
+#, kde-format
+msgid "Quit"
+msgstr "退出"
+
+#: src/mainwindow.cpp:600
+#, kde-format
+msgid ""
+"There are %1 decrypted file(s) in memory. They will be securely wiped.\n"
+"\n"
+"Quit?"
+msgstr ""
+"内存中有 %1 个已解密文件。它们将被安全擦除。\n"
+"\n"
+"是否退出？"
+
+# mainwindow.cpp - language switch
+#: src/mainwindow.cpp:641
+#, kde-format
+msgid "Switch Language"
+msgstr "切换语言"
+
+#: src/mainwindow.cpp:641
+#, kde-format
+msgid "Select language:"
+msgstr "选择语言："
+
+#: src/mainwindow.cpp:654
+#, kde-format
+msgid "Language already active."
+msgstr "该语言已在使用中。"
+
+#: src/mainwindow.cpp:665 src/mainwindow.cpp:675
+#, kde-format
+msgid "Language Changed"
+msgstr "语言已更改"
+
+#: src/mainwindow.cpp:666
+#, kde-format
+msgid ""
+"Changing language requires restarting. %1 decrypted file(s) in memory will be lost.\n"
+"\n"
+"Restart now or apply on next launch?"
+msgstr ""
+"更改语言需要重启。内存中的 %1 个已解密文件将丢失。\n"
+"\n"
+"立即重启还是下次启动时应用？"
+
+#: src/mainwindow.cpp:670 src/mainwindow.cpp:679
+#, kde-format
+msgid "Language will change on next launch."
+msgstr "语言将在下次启动时更改。"
+
+#: src/mainwindow.cpp:676
+#, kde-format
+msgid "Restart now to apply the new language?"
+msgstr "是否立即重启以应用新语言？"
+
+#: src/settingsdialog.cpp:30
+#, kde-format
+msgid "Key Manager"
+msgstr "密钥管理器"
+
+#: src/settingsdialog.cpp:35
+#, kde-format
+msgid "GPG Keys"
+msgstr "GPG 密钥"
+
+#: src/settingsdialog.cpp:39
+#, kde-format
+msgid "Expires"
+msgstr "过期时间"
+
+#: src/settingsdialog.cpp:39
+#, kde-format
+msgid "Created"
+msgstr "创建时间"
+
+#: src/settingsdialog.cpp:45
+#, kde-format
+msgid "GPG secret keys"
+msgstr "GPG 私钥"
+
+#: src/settingsdialog.cpp:51
+#, kde-format
+msgid "Import..."
+msgstr "导入..."
+
+#: src/settingsdialog.cpp:52
+#, kde-format
+msgid "Import a GPG key from a file"
+msgstr "从文件导入 GPG 密钥"
+
+#: src/settingsdialog.cpp:56
+#, kde-format
+msgid "Export..."
+msgstr "导出..."
+
+#: src/settingsdialog.cpp:57
+#, kde-format
+msgid "Export the selected key to a file"
+msgstr "将选定的密钥导出到文件"
+
+#: src/settingsdialog.cpp:61
+#, kde-format
+msgid "Generate..."
+msgstr "生成..."
+
+# keygendialog.cpp
+#: src/settingsdialog.cpp:62
+#, kde-format
+msgid "Generate a new GPG key pair"
+msgstr "生成新的 GPG 密钥对"
+
+#: src/settingsdialog.cpp:75
+#, kde-format
+msgid "Details..."
+msgstr "详情..."
+
+#: src/settingsdialog.cpp:76
+#, kde-format
+msgid "Show detailed information about the selected key"
+msgstr "显示所选密钥的详细信息"
+
+#: src/settingsdialog.cpp:80
+#, kde-format
+msgid "Change Passphrase..."
+msgstr "更改密码短语..."
+
+#: src/settingsdialog.cpp:81
+#, kde-format
+msgid "Change the passphrase of the selected key"
+msgstr "更改选定密钥的密码短语"
+
+#: src/settingsdialog.cpp:85
+#, kde-format
+msgid "Delete"
+msgstr "删除"
+
+#: src/settingsdialog.cpp:86
+#, kde-format
+msgid "Delete the selected key permanently"
+msgstr "永久删除所选密钥"
+
+#: src/settingsdialog.cpp:98
+#, kde-format
+msgid "Default GPG key:"
+msgstr "默认 GPG 密钥："
+
+#: src/settingsdialog.cpp:101
+#, kde-format
+msgid "Default GPG key"
+msgstr "默认 GPG 密钥"
+
+#: src/settingsdialog.cpp:105
+#, kde-format
+msgid "Store passphrase in KDE Wallet"
+msgstr "将密码短语存储在 KDE Wallet 中"
+
+#: src/settingsdialog.cpp:107
+#, kde-format
+msgid ""
+"When enabled, GPG passphrases are stored securely in KDE Wallet so you don't"
+" need to re-enter them"
+msgstr "启用后，GPG 密码短语将安全存储在 KDE Wallet 中，无需重复输入"
+
+#: src/settingsdialog.cpp:110
+#, kde-format
+msgid "Remember encrypted files between sessions (re-decrypt on start)"
+msgstr "在会话之间记住加密文件（启动时重新解密）"
+
+#: src/settingsdialog.cpp:112
+#, kde-format
+msgid ""
+"When enabled, file paths are saved and automatically re-decrypted when the "
+"application starts"
+msgstr "启用后，文件路径将被保存，并在应用程序启动时自动重新解密"
+
+#: src/settingsdialog.cpp:193
+#, kde-format
+msgid " (expired)"
+msgstr "（已过期）"
+
+#: src/settingsdialog.cpp:195 src/settingsdialog.cpp:198
+#, kde-format
+msgid "Never"
+msgstr "永不"
+
+#: src/settingsdialog.cpp:236 src/settingsdialog.cpp:315
+#: src/settingsdialog.cpp:400 src/settingsdialog.cpp:476
+#, kde-format
+msgid "GPG timed out."
+msgstr "GPG 操作超时。"
+
+#: src/settingsdialog.cpp:244
+#, kde-format
+msgid ""
+"Key imported successfully.\n"
+"\n"
+"%1"
+msgstr ""
+"密钥导入成功。\n"
+"\n"
+"%1"
+
+#: src/settingsdialog.cpp:259
+#, kde-format
+msgid "Public key"
+msgstr "公钥"
+
+#: src/settingsdialog.cpp:259
+#, kde-format
+msgid "Private key"
+msgstr "私钥"
+
+#: src/settingsdialog.cpp:262 src/settingsdialog.cpp:289
+#, kde-format
+msgid "Export Key"
+msgstr "导出密钥"
+
+#: src/settingsdialog.cpp:262
+#, kde-format
+msgid "Export type for: %1"
+msgstr "导出类型：%1"
+
+# mainwindow.cpp - dialogs
+#: src/settingsdialog.cpp:272
+#, kde-format
+msgid "Security Warning"
+msgstr "安全警告"
+
+#: src/settingsdialog.cpp:273
+#, kde-format
+msgid ""
+"Exporting a private key is a sensitive operation.\n"
+"\n"
+"Anyone with access to this file can impersonate you and decrypt your messages.\n"
+"\n"
+"Store it securely and never share it."
+msgstr ""
+"导出私钥是一项敏感操作。\n"
+"\n"
+"任何拥有此文件访问权限的人都可以冒充您并解密您的消息。\n"
+"\n"
+"请妥善保管，切勿分享。"
+
+#: src/settingsdialog.cpp:291
+#, kde-format
+msgid "ASCII Armored (*.asc);;Binary (*.gpg)"
+msgstr "ASCII Armored (*.asc);;二进制 (*.gpg)"
+
+#: src/settingsdialog.cpp:315 src/settingsdialog.cpp:320
+#, kde-format
+msgid "Export Failed"
+msgstr "导出失败"
+
+#: src/settingsdialog.cpp:323
+#, kde-format
+msgid "Export"
+msgstr "导出"
+
+#: src/settingsdialog.cpp:324
+#, kde-format
+msgid ""
+"Key exported to:\n"
+"%1"
+msgstr ""
+"密钥已导出到：\n"
+"%1"
+
+#: src/settingsdialog.cpp:342
+#, kde-format
+msgid "Failed to start GPG."
+msgstr "启动 GPG 失败。"
+
+#: src/settingsdialog.cpp:359
+#, kde-format
+msgid "Key generation timed out."
+msgstr "密钥生成超时。"
+
+#: src/settingsdialog.cpp:367
+#, kde-format
+msgid "Key Generated"
+msgstr "密钥已生成"
+
+#: src/settingsdialog.cpp:368
+#, kde-format
+msgid "Key generated successfully."
+msgstr "密钥生成成功。"
+
+#: src/settingsdialog.cpp:385
+#, kde-format
+msgid "Delete Key"
+msgstr "删除密钥"
+
+#: src/settingsdialog.cpp:386
+#, kde-format
+msgid ""
+"Delete key for:\n"
+"%1\n"
+"\n"
+"Fingerprint: %2\n"
+"\n"
+"This will permanently remove both public and private key.\n"
+"\n"
+"Type DELETE to confirm:"
+msgstr ""
+"删除以下密钥：\n"
+"%1\n"
+"\n"
+"指纹：%2\n"
+"\n"
+"这将永久删除公钥和私钥。\n"
+"\n"
+"输入 DELETE 以确认："
+
+#: src/settingsdialog.cpp:408
+#, kde-format
+msgid "Key Deleted"
+msgstr "密钥已删除"
+
+#: src/settingsdialog.cpp:409
+#, kde-format
+msgid "Key deleted successfully."
+msgstr "密钥删除成功。"
+
+#: src/settingsdialog.cpp:441
+#, kde-format
+msgid "Key Details"
+msgstr "密钥详情"
+
+#: src/settingsdialog.cpp:450
+#, kde-format
+msgid "Key details output"
+msgstr "密钥详细信息输出"
+
+#: src/settingsdialog.cpp:490
+#, kde-format
+msgid "Passphrase Changed"
+msgstr "密码短语已更改"
+
+#: src/settingsdialog.cpp:491
+#, kde-format
+msgid "Passphrase changed successfully."
+msgstr "密码短语更改成功。"
+
+#: src/settingsdialog.cpp:520
+#, kde-format
+msgid "(none)"
+msgstr "（无）"
+
+#~ msgid "Overwrite"
+#~ msgstr "覆盖"
+
+#~ msgid ""
+#~ "Output file already exists:\n"
+#~ "%1\n"
+#~ "\n"
+#~ "Overwrite?"
+#~ msgstr ""
+#~ "输出文件已存在：\n"
+#~ "%1\n"
+#~ "\n"
+#~ "是否覆盖？"
+
+# settingsdialog.cpp
+#~ msgid "Settings"
+#~ msgstr "设置"
+
+#~ msgid "Please restart KDecrypt for the language change to take effect."
+#~ msgstr "请重新启动 KDecrypt 以使语言更改生效。"

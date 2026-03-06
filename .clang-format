@@ -1,0 +1,12 @@
+BasedOnStyle: WebKit
+Standard: c++20
+ColumnLimit: 120
+IndentWidth: 4
+NamespaceIndentation: None
+AccessModifierOffset: -4
+AlignAfterOpenBracket: Align
+AllowShortFunctionsOnASingleLine: Inline
+BreakBeforeBraces: Linux
+BreakConstructorInitializers: BeforeColon
+PackConstructorInitializers: NextLine
+SpaceAfterCStyleCast: false

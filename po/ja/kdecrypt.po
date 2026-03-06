@@ -1,0 +1,1103 @@
+# Japanese translation for KDecrypt
+# Copyright (C) 2026 Guid
+# This file is distributed under the same license as the kdecrypt package.
+# Guid <guid@guid.pl>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdecrypt 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-06 16:02+0100\n"
+"PO-Revision-Date: 2026-03-06 14:40+0100\n"
+"Last-Translator: Guid <guid@guid.pl>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# encryptdialog.cpp
+#: src/encryptdialog.cpp:23
+#, kde-format
+msgid "Encrypt File"
+msgstr "ファイルを暗号化"
+
+#: src/encryptdialog.cpp:28
+#, kde-format
+msgid "Recipients (public keys)"
+msgstr "受信者（公開鍵）"
+
+#: src/encryptdialog.cpp:31
+#, kde-format
+msgid "Select one or more recipients who will be able to decrypt the file:"
+msgstr "ファイルを復号できる受信者を1人以上選択してください:"
+
+#: src/encryptdialog.cpp:36 src/settingsdialog.cpp:39
+#, kde-format
+msgid "User ID"
+msgstr "ユーザーID"
+
+#: src/encryptdialog.cpp:36 src/settingsdialog.cpp:39
+#, kde-format
+msgid "Key ID"
+msgstr "鍵ID"
+
+#: src/encryptdialog.cpp:36 src/settingsdialog.cpp:39
+#, kde-format
+msgid "Type"
+msgstr "タイプ"
+
+#: src/encryptdialog.cpp:41
+#, kde-format
+msgid "Recipient keys"
+msgstr "受信者の鍵"
+
+#: src/encryptdialog.cpp:46
+#, kde-format
+msgid "Your Key"
+msgstr "自分の鍵"
+
+#: src/encryptdialog.cpp:49
+#, kde-format
+msgid ""
+"Select your key to encrypt the file for yourself as well. Without this, you "
+"will not be able to decrypt the file later."
+msgstr "自分用にもファイルを暗号化するには、自分の鍵を選択してください。選択しない場合、後でファイルを復号できなくなります。"
+
+#: src/encryptdialog.cpp:55
+#, kde-format
+msgid "My key:"
+msgstr "自分の鍵:"
+
+#: src/encryptdialog.cpp:58
+#, kde-format
+msgid "Your encryption key"
+msgstr "自分の暗号化鍵"
+
+#: src/encryptdialog.cpp:62
+#, kde-format
+msgid "Also sign with this key (proves you sent the file)"
+msgstr "この鍵で署名も行う（ファイルの送信者であることを証明します）"
+
+#: src/encryptdialog.cpp:68
+#, kde-format
+msgid "ASCII armor output (.asc)"
+msgstr "ASCII Armor出力 (.asc)"
+
+#: src/encryptdialog.cpp:70
+#, kde-format
+msgid ""
+"Output the encrypted file as ASCII text instead of binary. Useful for email."
+msgstr "暗号化ファイルをバイナリではなくASCIIテキストとして出力します。メールでの送信に便利です。"
+
+#: src/encryptdialog.cpp:75
+#, kde-format
+msgid "Encrypt"
+msgstr "暗号化"
+
+#: src/encryptdialog.cpp:79 src/keygendialog.cpp:125 src/keygendialog.cpp:129
+#: src/keygendialog.cpp:133 src/keygendialog.cpp:137 src/mainwindow.cpp:101
+#: src/mainwindow.cpp:328 src/mainwindow.cpp:385 src/mainwindow.cpp:461
+#: src/mainwindow.cpp:476 src/mainwindow.cpp:495 src/mainwindow.cpp:507
+#: src/settingsdialog.cpp:342 src/settingsdialog.cpp:359
+#: src/settingsdialog.cpp:364 src/settingsdialog.cpp:400
+#: src/settingsdialog.cpp:405 src/settingsdialog.cpp:476
+#: src/settingsdialog.cpp:487
+#, kde-format
+msgid "Error"
+msgstr "エラー"
+
+#: src/encryptdialog.cpp:79
+#, kde-format
+msgid "Select at least one recipient."
+msgstr "受信者を1人以上選択してください。"
+
+#: src/encryptdialog.cpp:91
+#, kde-format
+msgid "No External Recipients"
+msgstr "外部の受信者なし"
+
+#: src/encryptdialog.cpp:92
+#, kde-format
+msgid ""
+"No external recipients selected. The file will only be decryptable by you.\n"
+"\n"
+"Continue?"
+msgstr ""
+"外部の受信者が選択されていません。ファイルはあなただけが復号できます。\n"
+"\n"
+"続行しますか？"
+
+#: src/encryptdialog.cpp:175
+#, kde-format
+msgid "(none — won't be able to decrypt)"
+msgstr "（なし — 復号できなくなります）"
+
+#: src/gpgengine.cpp:64
+#, kde-format
+msgid "Decryption failed: no matching secret key found."
+msgstr "復号に失敗しました: 一致する秘密鍵が見つかりません。"
+
+#: src/gpgengine.cpp:66
+#, kde-format
+msgid "The file was encrypted for key(s):"
+msgstr "ファイルは次の鍵で暗号化されています:"
+
+#: src/gpgengine.cpp:70
+#, kde-format
+msgid ""
+"Import the corresponding private key or ask the sender to encrypt for your "
+"key."
+msgstr "対応する秘密鍵をインポートするか、送信者にあなたの鍵で暗号化するよう依頼してください。"
+
+#: src/gpgengine.cpp:81 src/gpgengine.cpp:185
+#, kde-format
+msgid "File not found: %1"
+msgstr "ファイルが見つかりません: %1"
+
+#: src/gpgengine.cpp:88
+#, kde-format
+msgid "Failed to create temporary file"
+msgstr "一時ファイルの作成に失敗しました"
+
+#: src/gpgengine.cpp:112 src/gpgengine.cpp:134 src/gpgengine.cpp:221
+#: src/gpgengine.cpp:261
+#, kde-format
+msgid "Failed to start gpg"
+msgstr "gpgの起動に失敗しました"
+
+#: src/gpgengine.cpp:145 src/gpgengine.cpp:241 src/gpgengine.cpp:268
+#, kde-format
+msgid "GPG timed out"
+msgstr "GPGがタイムアウトしました"
+
+#: src/gpgengine.cpp:167
+#, kde-format
+msgid "Failed to read decrypted output"
+msgstr "復号済み出力の読み取りに失敗しました"
+
+# keygendialog.cpp
+#: src/keygendialog.cpp:23
+#, kde-format
+msgid "Generate GPG Key"
+msgstr "GPG鍵の生成"
+
+#: src/keygendialog.cpp:28
+#, kde-format
+msgid "Identity"
+msgstr "識別情報"
+
+#: src/keygendialog.cpp:32
+#, kde-format
+msgid "e.g. Jan Kowalski"
+msgstr "例: 山田太郎"
+
+#: src/keygendialog.cpp:33
+#, kde-format
+msgid "Name"
+msgstr "名前"
+
+#: src/keygendialog.cpp:34
+#, kde-format
+msgid "Name:"
+msgstr "名前:"
+
+#: src/keygendialog.cpp:37
+#, kde-format
+msgid "e.g. jan@example.com"
+msgstr "例: taro@example.com"
+
+#: src/keygendialog.cpp:38
+#, kde-format
+msgid "Email"
+msgstr "メールアドレス"
+
+#: src/keygendialog.cpp:39
+#, kde-format
+msgid "Email:"
+msgstr "メールアドレス:"
+
+#: src/keygendialog.cpp:42
+#, kde-format
+msgid "e.g. Work key, Personal"
+msgstr "例: 仕事用、個人用"
+
+#: src/keygendialog.cpp:43
+#, kde-format
+msgid "Comment"
+msgstr "コメント"
+
+#: src/keygendialog.cpp:44
+#, kde-format
+msgid "Comment:"
+msgstr "コメント:"
+
+#: src/keygendialog.cpp:48
+#, kde-format
+msgid "Key Parameters"
+msgstr "鍵のパラメータ"
+
+#: src/keygendialog.cpp:52
+#, kde-format
+msgid "Key type"
+msgstr "鍵の種類"
+
+#: src/keygendialog.cpp:59
+#, kde-format
+msgid "Key type:"
+msgstr "鍵の種類:"
+
+#: src/keygendialog.cpp:62
+#, kde-format
+msgid "Key size"
+msgstr "鍵のサイズ"
+
+#: src/keygendialog.cpp:63
+#, kde-format
+msgid "Key size:"
+msgstr "鍵のサイズ:"
+
+#: src/keygendialog.cpp:66
+#, kde-format
+msgid "Subkey type"
+msgstr "副鍵の種類"
+
+#: src/keygendialog.cpp:73
+#, kde-format
+msgid "None (signing only)"
+msgstr "なし（署名のみ）"
+
+#: src/keygendialog.cpp:74
+#, kde-format
+msgid "Subkey type:"
+msgstr "副鍵の種類:"
+
+#: src/keygendialog.cpp:77
+#, kde-format
+msgid "Subkey size"
+msgstr "副鍵のサイズ"
+
+#: src/keygendialog.cpp:78
+#, kde-format
+msgid "Subkey size:"
+msgstr "副鍵のサイズ:"
+
+#: src/keygendialog.cpp:82
+#, kde-format
+msgid "Expiration"
+msgstr "有効期限"
+
+#: src/keygendialog.cpp:85 src/keygendialog.cpp:86
+#, kde-format
+msgid "No expiration"
+msgstr "無期限"
+
+#: src/keygendialog.cpp:91
+#, kde-format
+msgid "Expiration date"
+msgstr "有効期限日"
+
+#: src/keygendialog.cpp:96
+#, kde-format
+msgid "Expires:"
+msgstr "有効期限:"
+
+#: src/keygendialog.cpp:100 src/keygendialog.cpp:106 src/mainwindow.cpp:569
+#, kde-format
+msgid "Passphrase"
+msgstr "パスフレーズ"
+
+#: src/keygendialog.cpp:105
+#, kde-format
+msgid "Leave empty for no passphrase"
+msgstr "パスフレーズを設定しない場合は空欄のままにしてください"
+
+#: src/keygendialog.cpp:107
+#, kde-format
+msgid "Leave empty to create a key without passphrase protection"
+msgstr "パスフレーズ保護なしの鍵を作成するには空欄のままにしてください"
+
+#: src/keygendialog.cpp:108
+#, kde-format
+msgid "Passphrase:"
+msgstr "パスフレーズ:"
+
+#: src/keygendialog.cpp:112
+#, kde-format
+msgid "Confirm passphrase"
+msgstr "パスフレーズの確認"
+
+#: src/keygendialog.cpp:113
+#, kde-format
+msgid "Confirm:"
+msgstr "確認:"
+
+#: src/keygendialog.cpp:119
+#, kde-format
+msgid "Generate"
+msgstr "生成"
+
+#: src/keygendialog.cpp:125
+#, kde-format
+msgid "Name is required."
+msgstr "名前は必須です。"
+
+#: src/keygendialog.cpp:129
+#, kde-format
+msgid "Email is required."
+msgstr "メールアドレスは必須です。"
+
+#: src/keygendialog.cpp:133
+#, kde-format
+msgid "Please enter a valid email address."
+msgstr "有効なメールアドレスを入力してください。"
+
+#: src/keygendialog.cpp:137
+#, kde-format
+msgid "Passphrases do not match."
+msgstr "パスフレーズが一致しません。"
+
+#: src/keygendialog.cpp:176
+#, kde-format
+msgid "Fixed by curve"
+msgstr "曲線により固定"
+
+#: src/keygendialog.cpp:205
+#, kde-format
+msgid "N/A"
+msgstr "該当なし"
+
+# main.cpp
+#: src/main.cpp:29 src/mainwindow.cpp:37
+#, kde-format
+msgid "KDecrypt"
+msgstr "KDecrypt"
+
+#: src/main.cpp:31
+#, kde-format
+msgid "PGP/GPG file encryption and decryption manager for KDE Plasma"
+msgstr "KDE Plasma用 PGP/GPGファイル暗号化・復号マネージャー"
+
+#: src/main.cpp:33
+#, kde-format
+msgid "(c) 2026 Guid"
+msgstr "(c) 2026 Guid"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Guid"
+msgstr "Guid"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Lead Developer"
+msgstr "リード開発者"
+
+#: src/main.cpp:54
+#, kde-format
+msgid "Encrypted files to open"
+msgstr "開く暗号化ファイル"
+
+# mainwindow.cpp - headers
+#: src/mainwindow.cpp:40
+#, kde-format
+msgid "File"
+msgstr "ファイル"
+
+#: src/mainwindow.cpp:40
+#, kde-format
+msgid "Size"
+msgstr "サイズ"
+
+#: src/mainwindow.cpp:40
+#, kde-format
+msgid "Key"
+msgstr "鍵"
+
+#: src/mainwindow.cpp:40
+#, kde-format
+msgid "Decrypted at"
+msgstr "復号日時"
+
+# mainwindow.cpp - accessibility
+#: src/mainwindow.cpp:46
+#, kde-format
+msgid "Decrypted files list"
+msgstr "復号済みファイル一覧"
+
+#: src/mainwindow.cpp:47
+#, kde-format
+msgid ""
+"List of decrypted files. Use context menu or keyboard shortcuts to open, "
+"save, or remove files."
+msgstr ""
+"復号済みファイルの一覧です。コンテキストメニューまたはキーボードショートカットを使用して、ファイルを開いたり、保存したり、削除したりできます。"
+
+# mainwindow.cpp - dialogs
+#: src/mainwindow.cpp:63
+#, kde-format
+msgid "Warning"
+msgstr "警告"
+
+#: src/mainwindow.cpp:64
+#, kde-format
+msgid "Could not open KDE Wallet. Passphrases will not be stored."
+msgstr "KDE Walletを開けませんでした。パスフレーズは保存されません。"
+
+#: src/mainwindow.cpp:102
+#, kde-format
+msgid ""
+"Failed to generate cryptographic key. In-memory encryption is disabled. "
+"Decrypted data will NOT be protected."
+msgstr "暗号鍵の生成に失敗しました。メモリ内暗号化は無効になっています。復号済みデータは保護されません。"
+
+# mainwindow.cpp - actions
+#: src/mainwindow.cpp:129
+#, kde-format
+msgid "Decrypt File..."
+msgstr "ファイルを復号..."
+
+#: src/mainwindow.cpp:131
+#, kde-format
+msgid "Open and decrypt a PGP/GPG encrypted file (Ctrl+O)"
+msgstr "PGP/GPG暗号化ファイルを開いて復号します (Ctrl+O)"
+
+#: src/mainwindow.cpp:134
+#, kde-format
+msgid "Encrypt File..."
+msgstr "ファイルを暗号化..."
+
+#: src/mainwindow.cpp:136
+#, kde-format
+msgid "Encrypt a file for selected recipients (Ctrl+E)"
+msgstr "選択した受信者のためにファイルを暗号化します (Ctrl+E)"
+
+#: src/mainwindow.cpp:141
+#, kde-format
+msgid "Key Manager..."
+msgstr "鍵マネージャー..."
+
+#: src/mainwindow.cpp:143
+#, kde-format
+msgid "Manage GPG keys and application settings (Ctrl+K)"
+msgstr "GPG鍵とアプリケーション設定を管理します (Ctrl+K)"
+
+#: src/mainwindow.cpp:148
+#, kde-format
+msgid "Switch Language..."
+msgstr "言語の切り替え..."
+
+#: src/mainwindow.cpp:149
+#, kde-format
+msgid "Change application language"
+msgstr "アプリケーションの言語を変更"
+
+#: src/mainwindow.cpp:156
+#, kde-format
+msgid "Save Decrypted..."
+msgstr "復号済みファイルを保存..."
+
+#: src/mainwindow.cpp:158
+#, kde-format
+msgid "Save the selected decrypted file to disk (Ctrl+S)"
+msgstr "選択した復号済みファイルをディスクに保存します (Ctrl+S)"
+
+#: src/mainwindow.cpp:164
+#, kde-format
+msgid "Open with Default App"
+msgstr "既定のアプリで開く"
+
+#: src/mainwindow.cpp:165
+#, kde-format
+msgid "Open the selected file with its default application"
+msgstr "選択したファイルを既定のアプリケーションで開きます"
+
+#: src/mainwindow.cpp:171
+#, kde-format
+msgid "Remove from List"
+msgstr "一覧から削除"
+
+#: src/mainwindow.cpp:173
+#, kde-format
+msgid "Remove the selected file from the list and wipe from memory (Del)"
+msgstr "選択したファイルを一覧から削除し、メモリから消去します (Del)"
+
+#: src/mainwindow.cpp:179 src/mainwindow.cpp:537
+#, kde-format
+msgid "Clear All"
+msgstr "すべてクリア"
+
+#: src/mainwindow.cpp:180
+#, kde-format
+msgid "Remove all files from the list and wipe from memory"
+msgstr "すべてのファイルを一覧から削除し、メモリから消去します"
+
+#: src/mainwindow.cpp:248
+#, kde-format
+msgid "File already open: %1"
+msgstr "ファイルは既に開いています: %1"
+
+#: src/mainwindow.cpp:257 src/mainwindow.cpp:396
+#, kde-format
+msgid "Large File"
+msgstr "大きなファイル"
+
+#: src/mainwindow.cpp:258
+#, kde-format
+msgid ""
+"This file is %1 MB. Decrypting large files may use significant memory and time.\n"
+"\n"
+"Continue?"
+msgstr ""
+"このファイルは %1 MBです。大きなファイルの復号には多くのメモリと時間がかかる場合があります。\n"
+"\n"
+"続行しますか？"
+
+#: src/mainwindow.cpp:268
+#, kde-format
+msgid "Decryption Failed"
+msgstr "復号に失敗しました"
+
+#: src/mainwindow.cpp:274
+#, kde-format
+msgid "Import Key..."
+msgstr "鍵をインポート..."
+
+#: src/mainwindow.cpp:279 src/settingsdialog.cpp:223
+#, kde-format
+msgid "Import GPG Key"
+msgstr "GPG鍵をインポート"
+
+#: src/mainwindow.cpp:280 src/settingsdialog.cpp:224
+#, kde-format
+msgid "GPG Key Files (*.asc *.gpg *.pgp *.key);;All Files (*)"
+msgstr "GPG鍵ファイル (*.asc *.gpg *.pgp *.key);;すべてのファイル (*)"
+
+#: src/mainwindow.cpp:291 src/settingsdialog.cpp:244
+#, kde-format
+msgid "Import"
+msgstr "インポート"
+
+#: src/mainwindow.cpp:292
+#, kde-format
+msgid "Key imported. Retrying decryption..."
+msgstr "鍵をインポートしました。復号を再試行しています..."
+
+#: src/mainwindow.cpp:295 src/settingsdialog.cpp:236
+#: src/settingsdialog.cpp:242
+#, kde-format
+msgid "Import Failed"
+msgstr "インポートに失敗しました"
+
+#: src/mainwindow.cpp:329
+#, kde-format
+msgid "Failed to store decrypted data in memory."
+msgstr "復号済みデータをメモリに保存できませんでした。"
+
+#: src/mainwindow.cpp:340
+#, kde-format
+msgid "unknown"
+msgstr "不明"
+
+#: src/mainwindow.cpp:348
+#, kde-format
+msgid "Decrypted: %1"
+msgstr "復号しました: %1"
+
+#: src/mainwindow.cpp:354
+#, kde-format
+msgid "Open Encrypted Files"
+msgstr "暗号化ファイルを開く"
+
+#: src/mainwindow.cpp:355
+#, kde-format
+msgid "PGP Encrypted Files (*.pgp *.gpg *.asc);;All Files (*)"
+msgstr "PGP暗号化ファイル (*.pgp *.gpg *.asc);;すべてのファイル (*)"
+
+#: src/mainwindow.cpp:364
+#, kde-format
+msgid "Select File to Encrypt"
+msgstr "暗号化するファイルを選択"
+
+#: src/mainwindow.cpp:365
+#, kde-format
+msgid "All Files (*)"
+msgstr "すべてのファイル (*)"
+
+#: src/mainwindow.cpp:378
+#, kde-format
+msgid "Save Encrypted File"
+msgstr "暗号化ファイルを保存"
+
+#: src/mainwindow.cpp:379
+#, kde-format
+msgid "PGP Binary (*.gpg);;ASCII Armored (*.asc);;All Files (*)"
+msgstr "PGPバイナリ (*.gpg);;ASCII Armored (*.asc);;すべてのファイル (*)"
+
+#: src/mainwindow.cpp:386
+#, kde-format
+msgid "Output file cannot be the same as the input file."
+msgstr "出力ファイルは入力ファイルと同じにできません。"
+
+#: src/mainwindow.cpp:397
+#, kde-format
+msgid ""
+"This file is %1 MB. Encrypting large files may take significant time.\n"
+"\n"
+"Continue?"
+msgstr ""
+"このファイルは %1 MBです。大きなファイルの暗号化には時間がかかる場合があります。\n"
+"\n"
+"続行しますか？"
+
+#: src/mainwindow.cpp:409
+#, kde-format
+msgid "Encryption Failed"
+msgstr "暗号化に失敗しました"
+
+#: src/mainwindow.cpp:411
+#, kde-format
+msgid "Encrypted"
+msgstr "暗号化完了"
+
+#: src/mainwindow.cpp:412
+#, kde-format
+msgid ""
+"File encrypted successfully:\n"
+"%1"
+msgstr ""
+"ファイルの暗号化に成功しました:\n"
+"%1"
+
+#: src/mainwindow.cpp:461 src/mainwindow.cpp:495
+#, kde-format
+msgid "Failed to decrypt data from memory."
+msgstr "メモリからデータを復号できませんでした。"
+
+#: src/mainwindow.cpp:476
+#, kde-format
+msgid "Failed to write temporary file."
+msgstr "一時ファイルの書き込みに失敗しました。"
+
+#: src/mainwindow.cpp:488
+#, kde-format
+msgid "Save Decrypted File"
+msgstr "復号済みファイルを保存"
+
+#: src/mainwindow.cpp:504
+#, kde-format
+msgid "Saved: %1"
+msgstr "保存しました: %1"
+
+#: src/mainwindow.cpp:508
+#, kde-format
+msgid "Failed to save file: %1"
+msgstr "ファイルの保存に失敗しました: %1"
+
+#: src/mainwindow.cpp:519
+#, kde-format
+msgid "Remove File"
+msgstr "ファイルを削除"
+
+#: src/mainwindow.cpp:520
+#, kde-format
+msgid "Remove \"%1\" from the list and wipe from memory?"
+msgstr "\"%1\" を一覧から削除し、メモリから消去しますか？"
+
+#: src/mainwindow.cpp:528
+#, kde-format
+msgid "Removed: %1"
+msgstr "削除しました: %1"
+
+#: src/mainwindow.cpp:538
+#, kde-format
+msgid "Remove all decrypted files from the list?"
+msgstr "すべての復号済みファイルを一覧から削除しますか？"
+
+#: src/mainwindow.cpp:547
+#, kde-format
+msgid "All files cleared."
+msgstr "すべてのファイルを削除しました。"
+
+#: src/mainwindow.cpp:566
+#, kde-format
+msgid "Enter passphrase for GPG key:"
+msgstr "GPG鍵のパスフレーズを入力してください:"
+
+#: src/mainwindow.cpp:567
+#, kde-format
+msgid "Enter passphrase for GPG key %1:"
+msgstr "GPG鍵 %1 のパスフレーズを入力してください:"
+
+#: src/mainwindow.cpp:599
+#, kde-format
+msgid "Quit"
+msgstr "終了"
+
+#: src/mainwindow.cpp:600
+#, kde-format
+msgid ""
+"There are %1 decrypted file(s) in memory. They will be securely wiped.\n"
+"\n"
+"Quit?"
+msgstr ""
+"メモリ内に %1 個の復号済みファイルがあります。安全に消去されます。\n"
+"\n"
+"終了しますか？"
+
+# mainwindow.cpp - language switch
+#: src/mainwindow.cpp:641
+#, kde-format
+msgid "Switch Language"
+msgstr "言語の切り替え"
+
+#: src/mainwindow.cpp:641
+#, kde-format
+msgid "Select language:"
+msgstr "言語を選択："
+
+#: src/mainwindow.cpp:654
+#, kde-format
+msgid "Language already active."
+msgstr "この言語は既に使用中です。"
+
+#: src/mainwindow.cpp:665 src/mainwindow.cpp:675
+#, kde-format
+msgid "Language Changed"
+msgstr "言語が変更されました"
+
+#: src/mainwindow.cpp:666
+#, kde-format
+msgid ""
+"Changing language requires restarting. %1 decrypted file(s) in memory will be lost.\n"
+"\n"
+"Restart now or apply on next launch?"
+msgstr ""
+"言語の変更には再起動が必要です。メモリ内の %1 個の復号済みファイルは失われます。\n"
+"\n"
+"今すぐ再起動しますか、それとも次回起動時に適用しますか？"
+
+#: src/mainwindow.cpp:670 src/mainwindow.cpp:679
+#, kde-format
+msgid "Language will change on next launch."
+msgstr "言語は次回起動時に変更されます。"
+
+#: src/mainwindow.cpp:676
+#, kde-format
+msgid "Restart now to apply the new language?"
+msgstr "新しい言語を適用するために今すぐ再起動しますか？"
+
+#: src/settingsdialog.cpp:30
+#, kde-format
+msgid "Key Manager"
+msgstr "鍵マネージャー"
+
+#: src/settingsdialog.cpp:35
+#, kde-format
+msgid "GPG Keys"
+msgstr "GPG鍵"
+
+#: src/settingsdialog.cpp:39
+#, kde-format
+msgid "Expires"
+msgstr "有効期限"
+
+#: src/settingsdialog.cpp:39
+#, kde-format
+msgid "Created"
+msgstr "作成日"
+
+#: src/settingsdialog.cpp:45
+#, kde-format
+msgid "GPG secret keys"
+msgstr "GPG秘密鍵"
+
+#: src/settingsdialog.cpp:51
+#, kde-format
+msgid "Import..."
+msgstr "インポート..."
+
+#: src/settingsdialog.cpp:52
+#, kde-format
+msgid "Import a GPG key from a file"
+msgstr "ファイルからGPG鍵をインポートします"
+
+#: src/settingsdialog.cpp:56
+#, kde-format
+msgid "Export..."
+msgstr "エクスポート..."
+
+#: src/settingsdialog.cpp:57
+#, kde-format
+msgid "Export the selected key to a file"
+msgstr "選択した鍵をファイルにエクスポートします"
+
+#: src/settingsdialog.cpp:61
+#, kde-format
+msgid "Generate..."
+msgstr "生成..."
+
+# keygendialog.cpp
+#: src/settingsdialog.cpp:62
+#, kde-format
+msgid "Generate a new GPG key pair"
+msgstr "新しいGPG鍵ペアを生成します"
+
+#: src/settingsdialog.cpp:75
+#, kde-format
+msgid "Details..."
+msgstr "詳細..."
+
+#: src/settingsdialog.cpp:76
+#, kde-format
+msgid "Show detailed information about the selected key"
+msgstr "選択した鍵の詳細情報を表示します"
+
+#: src/settingsdialog.cpp:80
+#, kde-format
+msgid "Change Passphrase..."
+msgstr "パスフレーズを変更..."
+
+#: src/settingsdialog.cpp:81
+#, kde-format
+msgid "Change the passphrase of the selected key"
+msgstr "選択した鍵のパスフレーズを変更します"
+
+#: src/settingsdialog.cpp:85
+#, kde-format
+msgid "Delete"
+msgstr "削除"
+
+#: src/settingsdialog.cpp:86
+#, kde-format
+msgid "Delete the selected key permanently"
+msgstr "選択した鍵を完全に削除します"
+
+#: src/settingsdialog.cpp:98
+#, kde-format
+msgid "Default GPG key:"
+msgstr "既定のGPG鍵:"
+
+#: src/settingsdialog.cpp:101
+#, kde-format
+msgid "Default GPG key"
+msgstr "既定のGPG鍵"
+
+#: src/settingsdialog.cpp:105
+#, kde-format
+msgid "Store passphrase in KDE Wallet"
+msgstr "パスフレーズをKDE Walletに保存する"
+
+#: src/settingsdialog.cpp:107
+#, kde-format
+msgid ""
+"When enabled, GPG passphrases are stored securely in KDE Wallet so you don't"
+" need to re-enter them"
+msgstr "有効にすると、GPGパスフレーズがKDE Walletに安全に保存され、再入力が不要になります"
+
+#: src/settingsdialog.cpp:110
+#, kde-format
+msgid "Remember encrypted files between sessions (re-decrypt on start)"
+msgstr "セッション間で暗号化ファイルを記憶する（起動時に再復号）"
+
+#: src/settingsdialog.cpp:112
+#, kde-format
+msgid ""
+"When enabled, file paths are saved and automatically re-decrypted when the "
+"application starts"
+msgstr "有効にすると、ファイルパスが保存され、アプリケーション起動時に自動的に再復号されます"
+
+#: src/settingsdialog.cpp:193
+#, kde-format
+msgid " (expired)"
+msgstr "（期限切れ）"
+
+#: src/settingsdialog.cpp:195 src/settingsdialog.cpp:198
+#, kde-format
+msgid "Never"
+msgstr "無期限"
+
+#: src/settingsdialog.cpp:236 src/settingsdialog.cpp:315
+#: src/settingsdialog.cpp:400 src/settingsdialog.cpp:476
+#, kde-format
+msgid "GPG timed out."
+msgstr "GPGがタイムアウトしました。"
+
+#: src/settingsdialog.cpp:244
+#, kde-format
+msgid ""
+"Key imported successfully.\n"
+"\n"
+"%1"
+msgstr ""
+"鍵のインポートに成功しました。\n"
+"\n"
+"%1"
+
+#: src/settingsdialog.cpp:259
+#, kde-format
+msgid "Public key"
+msgstr "公開鍵"
+
+#: src/settingsdialog.cpp:259
+#, kde-format
+msgid "Private key"
+msgstr "秘密鍵"
+
+#: src/settingsdialog.cpp:262 src/settingsdialog.cpp:289
+#, kde-format
+msgid "Export Key"
+msgstr "鍵をエクスポート"
+
+#: src/settingsdialog.cpp:262
+#, kde-format
+msgid "Export type for: %1"
+msgstr "%1 のエクスポート形式:"
+
+# mainwindow.cpp - dialogs
+#: src/settingsdialog.cpp:272
+#, kde-format
+msgid "Security Warning"
+msgstr "セキュリティ警告"
+
+#: src/settingsdialog.cpp:273
+#, kde-format
+msgid ""
+"Exporting a private key is a sensitive operation.\n"
+"\n"
+"Anyone with access to this file can impersonate you and decrypt your messages.\n"
+"\n"
+"Store it securely and never share it."
+msgstr ""
+"秘密鍵のエクスポートは機密性の高い操作です。\n"
+"\n"
+"このファイルにアクセスできる人は、あなたになりすましたり、あなたのメッセージを復号したりできます。\n"
+"\n"
+"安全に保管し、絶対に共有しないでください。"
+
+#: src/settingsdialog.cpp:291
+#, kde-format
+msgid "ASCII Armored (*.asc);;Binary (*.gpg)"
+msgstr "ASCII Armored (*.asc);;バイナリ (*.gpg)"
+
+#: src/settingsdialog.cpp:315 src/settingsdialog.cpp:320
+#, kde-format
+msgid "Export Failed"
+msgstr "エクスポートに失敗しました"
+
+#: src/settingsdialog.cpp:323
+#, kde-format
+msgid "Export"
+msgstr "エクスポート"
+
+#: src/settingsdialog.cpp:324
+#, kde-format
+msgid ""
+"Key exported to:\n"
+"%1"
+msgstr ""
+"鍵のエクスポート先:\n"
+"%1"
+
+#: src/settingsdialog.cpp:342
+#, kde-format
+msgid "Failed to start GPG."
+msgstr "GPGの起動に失敗しました。"
+
+#: src/settingsdialog.cpp:359
+#, kde-format
+msgid "Key generation timed out."
+msgstr "鍵の生成がタイムアウトしました。"
+
+#: src/settingsdialog.cpp:367
+#, kde-format
+msgid "Key Generated"
+msgstr "鍵を生成しました"
+
+#: src/settingsdialog.cpp:368
+#, kde-format
+msgid "Key generated successfully."
+msgstr "鍵の生成に成功しました。"
+
+#: src/settingsdialog.cpp:385
+#, kde-format
+msgid "Delete Key"
+msgstr "鍵を削除"
+
+#: src/settingsdialog.cpp:386
+#, kde-format
+msgid ""
+"Delete key for:\n"
+"%1\n"
+"\n"
+"Fingerprint: %2\n"
+"\n"
+"This will permanently remove both public and private key.\n"
+"\n"
+"Type DELETE to confirm:"
+msgstr ""
+"以下の鍵を削除します:\n"
+"%1\n"
+"\n"
+"フィンガープリント: %2\n"
+"\n"
+"公開鍵と秘密鍵の両方が完全に削除されます。\n"
+"\n"
+"確認するにはDELETEと入力してください:"
+
+#: src/settingsdialog.cpp:408
+#, kde-format
+msgid "Key Deleted"
+msgstr "鍵を削除しました"
+
+#: src/settingsdialog.cpp:409
+#, kde-format
+msgid "Key deleted successfully."
+msgstr "鍵の削除に成功しました。"
+
+#: src/settingsdialog.cpp:441
+#, kde-format
+msgid "Key Details"
+msgstr "鍵の詳細"
+
+#: src/settingsdialog.cpp:450
+#, kde-format
+msgid "Key details output"
+msgstr "鍵の詳細出力"
+
+#: src/settingsdialog.cpp:490
+#, kde-format
+msgid "Passphrase Changed"
+msgstr "パスフレーズを変更しました"
+
+#: src/settingsdialog.cpp:491
+#, kde-format
+msgid "Passphrase changed successfully."
+msgstr "パスフレーズの変更に成功しました。"
+
+#: src/settingsdialog.cpp:520
+#, kde-format
+msgid "(none)"
+msgstr "（なし）"
+
+#~ msgid "Overwrite"
+#~ msgstr "上書き"
+
+#~ msgid ""
+#~ "Output file already exists:\n"
+#~ "%1\n"
+#~ "\n"
+#~ "Overwrite?"
+#~ msgstr ""
+#~ "出力ファイルは既に存在します:\n"
+#~ "%1\n"
+#~ "\n"
+#~ "上書きしますか？"
+
+# settingsdialog.cpp
+#~ msgid "Settings"
+#~ msgstr "設定"
+
+#~ msgid "Please restart KDecrypt for the language change to take effect."
+#~ msgstr "言語の変更を反映するには、KDecrypt を再起動してください。"

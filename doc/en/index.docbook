@@ -1,0 +1,230 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kdecrypt "<application>KDecrypt</application>">
+  <!ENTITY % English "INCLUDE">
+]>
+
+<book id="kdecrypt" lang="&language;">
+
+<bookinfo>
+<title>The &kdecrypt; Handbook</title>
+
+<authorgroup>
+<author>
+<firstname>Guid</firstname>
+<surname></surname>
+<affiliation>
+<address><email>guid@guid.pl</email></address>
+</affiliation>
+</author>
+</authorgroup>
+
+<copyright>
+<year>2026</year>
+<holder>Guid</holder>
+</copyright>
+
+<legalnotice>&FDLNotice;</legalnotice>
+
+<date>2026-03-06</date>
+<releaseinfo>1.0.0</releaseinfo>
+
+<abstract>
+<para>&kdecrypt; is a KDE Plasma application for encrypting, decrypting, and managing PGP/GPG files and keys.</para>
+</abstract>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>PGP</keyword>
+<keyword>GPG</keyword>
+<keyword>encryption</keyword>
+<keyword>decryption</keyword>
+<keyword>security</keyword>
+<keyword>KDecrypt</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title>Introduction</title>
+
+<para>&kdecrypt; is a file encryption and decryption manager for KDE Plasma. It provides a graphical interface for working with PGP/GPG encrypted files and managing your GPG keyring.</para>
+
+<para>Key features:</para>
+<itemizedlist>
+<listitem><para>Decrypt <filename>.pgp</filename>, <filename>.gpg</filename>, and <filename>.asc</filename> files</para></listitem>
+<listitem><para>Encrypt files for one or more recipients</para></listitem>
+<listitem><para>Full GPG key management (generate, import, export, delete)</para></listitem>
+<listitem><para>Passphrase storage via KDE Wallet</para></listitem>
+<listitem><para>File association support for Plasma desktop</para></listitem>
+<listitem><para>Open decrypted files with default applications</para></listitem>
+<listitem><para>Remember encrypted files between sessions</para></listitem>
+<listitem><para>Drag-and-drop support for quick file decryption</para></listitem>
+<listitem><para>In-memory AES-256-GCM encryption for secure data handling</para></listitem>
+<listitem><para>Switchable interface language</para></listitem>
+</itemizedlist>
+</chapter>
+
+<chapter id="using-kdecrypt">
+<title>Using &kdecrypt;</title>
+
+<sect1 id="decrypting">
+<title>Decrypting Files</title>
+
+<para>To decrypt a file:</para>
+<orderedlist>
+<listitem><para>Click <menuchoice><guimenu>File</guimenu><guimenuitem>Decrypt File...</guimenuitem></menuchoice> or use the toolbar button.</para></listitem>
+<listitem><para>Select one or more encrypted files (<filename>.pgp</filename>, <filename>.gpg</filename>, or <filename>.asc</filename>).</para></listitem>
+<listitem><para>If prompted, enter the passphrase for your GPG key.</para></listitem>
+<listitem><para>The decrypted file appears in the file list with its original name, size, the key used for decryption, and timestamp.</para></listitem>
+</orderedlist>
+
+<para>You can also open encrypted files directly by double-clicking them in Dolphin if &kdecrypt; is set as the default application for PGP files.</para>
+
+<para>If decryption fails because the required secret key is not in your keyring, &kdecrypt; will show which key IDs the file was encrypted for and offer an <guibutton>Import Key...</guibutton> button. After importing the key, decryption is retried automatically.</para>
+
+<sect2 id="drag-and-drop">
+<title>Drag and Drop</title>
+
+<para>You can drag encrypted files from Dolphin or any other file manager directly onto the &kdecrypt; window. Dropped files are decrypted immediately, just as if you had opened them via the menu.</para>
+</sect2>
+
+<sect2 id="decrypted-files">
+<title>Working with Decrypted Files</title>
+
+<para>Once a file is decrypted, you can:</para>
+<itemizedlist>
+<listitem><para><emphasis>Double-click</emphasis> or use <menuchoice><guimenuitem>Open with Default App</guimenuitem></menuchoice> to view the file in the appropriate application.</para></listitem>
+<listitem><para>Use <menuchoice><guimenuitem>Save Decrypted...</guimenuitem></menuchoice> (<keycombo action="simul">&Ctrl;<keycap>S</keycap></keycombo>) to save the decrypted file to disk.</para></listitem>
+<listitem><para>Use <menuchoice><guimenuitem>Remove from List</guimenuitem></menuchoice> (<keycap>Delete</keycap>) to remove a single file.</para></listitem>
+<listitem><para>Use <menuchoice><guimenuitem>Clear All</guimenuitem></menuchoice> to remove all files from the list.</para></listitem>
+</itemizedlist>
+
+<para>Decrypted files remain in the list until you remove them manually. The decrypted data is held in memory only and is not written to disk unless you explicitly save it.</para>
+</sect2>
+</sect1>
+
+<sect1 id="remember-files">
+<title>Remembering Files Between Sessions</title>
+
+<para>&kdecrypt; can remember which encrypted files you had open when you quit the application. When enabled, the file list is restored on the next launch and the files are re-decrypted automatically.</para>
+
+<para>This option can be toggled in <menuchoice><guimenu>Settings</guimenu><guimenuitem>Settings...</guimenuitem></menuchoice>. When enabled, the paths of encrypted files are saved to the application configuration. The decrypted content itself is never stored on disk.</para>
+</sect1>
+
+<sect1 id="encrypting">
+<title>Encrypting Files</title>
+
+<para>To encrypt a file:</para>
+<orderedlist>
+<listitem><para>Click <menuchoice><guimenu>File</guimenu><guimenuitem>Encrypt File...</guimenuitem></menuchoice> or press <keycombo action="simul">&Ctrl;<keycap>E</keycap></keycombo>.</para></listitem>
+<listitem><para>Select the file to encrypt.</para></listitem>
+<listitem><para>In the Encrypt dialog, check the recipients (public keys) who should be able to decrypt the file.</para></listitem>
+<listitem><para>Optionally select a signing key to sign the encrypted file.</para></listitem>
+<listitem><para>Optionally enable <guilabel>ASCII armor output</guilabel> to create a <filename>.asc</filename> text file instead of a binary <filename>.gpg</filename> file.</para></listitem>
+<listitem><para>Click <guibutton>Encrypt</guibutton>.</para></listitem>
+</orderedlist>
+
+<para>The encrypted file is created in the same directory as the original file.</para>
+</sect1>
+
+<sect1 id="key-manager">
+<title>Key Manager</title>
+
+<para>Open the Key Manager via <menuchoice><guimenu>Settings</guimenu><guimenuitem>Key Manager...</guimenuitem></menuchoice> or press <keycombo action="simul">&Ctrl;<keycap>K</keycap></keycombo>.</para>
+
+<para>The Key Manager displays all private keys in your GPG keyring and provides the following operations:</para>
+
+<sect2 id="key-generate">
+<title>Generating Keys</title>
+<para>Click <guibutton>Generate...</guibutton> to create a new GPG key pair. You can configure:</para>
+<itemizedlist>
+<listitem><para><emphasis>Identity</emphasis>: name, email address, and optional comment.</para></listitem>
+<listitem><para><emphasis>Key type</emphasis>: EdDSA (Ed25519), RSA, ECDSA (NIST P-256/P-384/P-521), or DSA.</para></listitem>
+<listitem><para><emphasis>Key size</emphasis>: for RSA and DSA, choose from standard sizes (2048, 3072, 4096 bits). Elliptic curve keys have a fixed size.</para></listitem>
+<listitem><para><emphasis>Subkey type</emphasis>: ECDH (Curve25519), RSA, ECDH (NIST curves), ElGamal, or none.</para></listitem>
+<listitem><para><emphasis>Expiration</emphasis>: set an expiry date or choose no expiration.</para></listitem>
+<listitem><para><emphasis>Passphrase</emphasis>: protect your key with a passphrase.</para></listitem>
+</itemizedlist>
+</sect2>
+
+<sect2 id="key-import-export">
+<title>Importing and Exporting Keys</title>
+<para><guibutton>Import...</guibutton> reads a key from a file (<filename>.asc</filename>, <filename>.gpg</filename>, <filename>.pgp</filename>, <filename>.key</filename>) into your GPG keyring.</para>
+<para><guibutton>Export...</guibutton> saves a key to a file. You can choose to export the public key only or both public and private keys.</para>
+</sect2>
+
+<sect2 id="key-other">
+<title>Other Operations</title>
+<itemizedlist>
+<listitem><para><guibutton>Details...</guibutton> shows the full GPG output for a key, including fingerprints and subkeys.</para></listitem>
+<listitem><para><guibutton>Change Passphrase...</guibutton> opens the GPG pinentry dialog to change the key's passphrase.</para></listitem>
+<listitem><para><guibutton>Delete</guibutton> removes both the public and private key from your keyring after confirmation.</para></listitem>
+</itemizedlist>
+</sect2>
+</sect1>
+
+<sect1 id="wallet">
+<title>KDE Wallet Integration</title>
+
+<para>&kdecrypt; can store your GPG passphrase in the KDE Wallet so you don't have to enter it every time. This is controlled by the <guilabel>Store passphrase in KDE Wallet</guilabel> checkbox in the Key Manager.</para>
+
+<para>When enabled, the first time you enter a passphrase it is saved to the wallet. On subsequent decryptions, the passphrase is retrieved automatically.</para>
+</sect1>
+
+<sect1 id="language-switching">
+<title>Language Switching</title>
+
+<para>&kdecrypt; supports switching the interface language without changing your system locale. Use <menuchoice><guimenu>Settings</guimenu><guimenuitem>Switch Language...</guimenuitem></menuchoice> to select a different language. The change takes effect after restarting the application.</para>
+</sect1>
+
+</chapter>
+
+<chapter id="security">
+<title>Security</title>
+
+<para>&kdecrypt; takes several measures to protect your sensitive data:</para>
+
+<itemizedlist>
+<listitem><para><emphasis>In-memory encryption</emphasis>: Decrypted file contents are stored in memory using AES-256-GCM authenticated encryption. A random key is generated at startup and held only in process memory. This protects against memory dumps and swap file leaks.</para></listitem>
+<listitem><para><emphasis>Secure wiping</emphasis>: When files are removed from the list or the application exits, decrypted data buffers are overwritten with zeros before being freed.</para></listitem>
+<listitem><para><emphasis>No temporary files</emphasis>: Decrypted data is never written to disk unless you explicitly choose <guimenuitem>Save Decrypted...</guimenuitem>.</para></listitem>
+<listitem><para><emphasis>Passphrase handling</emphasis>: Passphrases are passed to GPG via file descriptor, never via command-line arguments.</para></listitem>
+</itemizedlist>
+</chapter>
+
+<chapter id="commands">
+<title>Keyboard Shortcuts</title>
+
+<informaltable>
+<tgroup cols="2">
+<thead>
+<row><entry>Shortcut</entry><entry>Action</entry></row>
+</thead>
+<tbody>
+<row><entry><keycombo action="simul">&Ctrl;<keycap>O</keycap></keycombo></entry><entry>Decrypt file</entry></row>
+<row><entry><keycombo action="simul">&Ctrl;<keycap>E</keycap></keycombo></entry><entry>Encrypt file</entry></row>
+<row><entry><keycombo action="simul">&Ctrl;<keycap>K</keycap></keycombo></entry><entry>Key Manager</entry></row>
+<row><entry><keycombo action="simul">&Ctrl;<keycap>S</keycap></keycombo></entry><entry>Save decrypted file</entry></row>
+<row><entry><keycap>Return</keycap></entry><entry>Open decrypted file with default app</entry></row>
+<row><entry><keycap>Delete</keycap></entry><entry>Remove file from list</entry></row>
+<row><entry><keycombo action="simul">&Ctrl;<keycap>Q</keycap></keycombo></entry><entry>Quit</entry></row>
+</tbody>
+</tgroup>
+</informaltable>
+</chapter>
+
+<chapter id="credits">
+<title>Credits and License</title>
+
+<para>&kdecrypt;</para>
+<para>Program copyright &copy; 2026 Guid <email>guid@guid.pl</email></para>
+<para>Project homepage: <ulink url="https://github.com/Guid-Lab/kdecrypt">github.com/Guid-Lab/kdecrypt</ulink></para>
+<para>Report bugs: <ulink url="https://github.com/Guid-Lab/kdecrypt/issues">github.com/Guid-Lab/kdecrypt/issues</ulink></para>
+
+&underFDL;
+&underGPL;
+
+</chapter>
+
+</book>

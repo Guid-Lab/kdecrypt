@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-FileCopyrightText: 2026 Guid <guid@guid.pl> -->
+<!-- SPDX-License-Identifier: FSFAP -->
+<component type="desktop-application">
+  <id>org.guidlab.kdecrypt</id>
+  <metadata_license>FSFAP</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>KDecrypt</name>
+  <name xml:lang="pl">KDecrypt</name>
+  <summary>PGP/GPG file encryption and decryption manager</summary>
+  <summary xml:lang="pl">Menedżer szyfrowania i deszyfrowania plików PGP/GPG</summary>
+  <description>
+    <p>KDecrypt is a KDE Plasma application for encrypting, decrypting, and managing PGP/GPG files and keys. It provides a graphical interface for working with encrypted files and managing your GPG keyring.</p>
+    <p xml:lang="pl">KDecrypt to aplikacja KDE Plasma do szyfrowania, deszyfrowania i zarządzania plikami oraz kluczami PGP/GPG. Zapewnia graficzny interfejs do pracy z zaszyfrowanymi plikami i zarządzania kluczami GPG.</p>
+    <p>Features include:</p>
+    <p xml:lang="pl">Funkcje:</p>
+    <ul>
+      <li>Decrypt .pgp, .gpg, and .asc files</li>
+      <li xml:lang="pl">Deszyfrowanie plików .pgp, .gpg i .asc</li>
+      <li>Encrypt files for multiple recipients</li>
+      <li xml:lang="pl">Szyfrowanie plików dla wielu odbiorców</li>
+      <li>Full GPG key management (generate, import, export, delete)</li>
+      <li xml:lang="pl">Pełne zarządzanie kluczami GPG (generowanie, import, eksport, usuwanie)</li>
+      <li>Passphrase storage via KDE Wallet</li>
+      <li xml:lang="pl">Przechowywanie haseł w portfelu KDE</li>
+    </ul>
+  </description>
+  <url type="homepage">https://github.com/Guid-Lab/kdecrypt</url>
+  <url type="bugtracker">https://github.com/Guid-Lab/kdecrypt/issues</url>
+  <developer id="pl.guid">
+    <name>Guid</name>
+    <url>https://github.com/Guid-Lab</url>
+  </developer>
+  <launchable type="desktop-id">org.guidlab.kdecrypt.desktop</launchable>
+  <provides>
+    <binary>kdecrypt</binary>
+    <mediatype>application/pgp-encrypted</mediatype>
+    <mediatype>application/pgp</mediatype>
+  </provides>
+  <recommends>
+    <id>org.kde.khelpcenter</id>
+  </recommends>
+  <translation type="gettext">kdecrypt</translation>
+  <screenshots>
+    <screenshot type="default">
+      <caption>KDecrypt main window with decrypted files</caption>
+      <caption xml:lang="pl">Główne okno KDecrypt z odszyfrowanymi plikami</caption>
+      <image>https://raw.githubusercontent.com/Guid-Lab/kdecrypt/main/screenshots/main.png</image>
+    </screenshot>
+  </screenshots>
+  <content_rating type="oars-1.1" />
+  <releases>
+    <release version="1.0.0" date="2026-03-06">
+      <description>
+        <p>Added built-in handbook, remember files option, import key on decryption failure.</p>
+      </description>
+    </release>
+    <release version="0.2.0" date="2026-03-06">
+      <description>
+        <p>Initial release with encryption, decryption, key management, and KDE Wallet integration.</p>
+      </description>
+    </release>
+  </releases>
+</component>

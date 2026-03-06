@@ -1,0 +1,230 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kdecrypt "<application>KDecrypt</application>">
+  <!ENTITY % Polish "INCLUDE">
+]>
+
+<book id="kdecrypt" lang="&language;">
+
+<bookinfo>
+<title>Podręcznik &kdecrypt;</title>
+
+<authorgroup>
+<author>
+<firstname>Guid</firstname>
+<surname></surname>
+<affiliation>
+<address><email>guid@guid.pl</email></address>
+</affiliation>
+</author>
+</authorgroup>
+
+<copyright>
+<year>2026</year>
+<holder>Guid</holder>
+</copyright>
+
+<legalnotice>&FDLNotice;</legalnotice>
+
+<date>2026-03-06</date>
+<releaseinfo>1.0.0</releaseinfo>
+
+<abstract>
+<para>&kdecrypt; to aplikacja KDE Plasma do szyfrowania, deszyfrowania i zarządzania plikami oraz kluczami PGP/GPG.</para>
+</abstract>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>PGP</keyword>
+<keyword>GPG</keyword>
+<keyword>szyfrowanie</keyword>
+<keyword>deszyfrowanie</keyword>
+<keyword>bezpieczeństwo</keyword>
+<keyword>KDecrypt</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title>Wprowadzenie</title>
+
+<para>&kdecrypt; to menedżer szyfrowania i deszyfrowania plików dla KDE Plasma. Zapewnia graficzny interfejs do pracy z plikami zaszyfrowanymi PGP/GPG oraz zarządzania kluczami GPG.</para>
+
+<para>Główne funkcje:</para>
+<itemizedlist>
+<listitem><para>Deszyfrowanie plików <filename>.pgp</filename>, <filename>.gpg</filename> i <filename>.asc</filename></para></listitem>
+<listitem><para>Szyfrowanie plików dla jednego lub wielu odbiorców</para></listitem>
+<listitem><para>Pełne zarządzanie kluczami GPG (generowanie, import, eksport, usuwanie)</para></listitem>
+<listitem><para>Przechowywanie haseł w portfelu KDE</para></listitem>
+<listitem><para>Powiązanie z plikami PGP w środowisku Plasma</para></listitem>
+<listitem><para>Otwieranie odszyfrowanych plików domyślnymi aplikacjami</para></listitem>
+<listitem><para>Zapamiętywanie zaszyfrowanych plików między sesjami</para></listitem>
+<listitem><para>Obsługa przeciągania i upuszczania plików</para></listitem>
+<listitem><para>Szyfrowanie danych w pamięci algorytmem AES-256-GCM</para></listitem>
+<listitem><para>Przełączanie języka interfejsu</para></listitem>
+</itemizedlist>
+</chapter>
+
+<chapter id="using-kdecrypt">
+<title>Korzystanie z &kdecrypt;</title>
+
+<sect1 id="decrypting">
+<title>Deszyfrowanie plików</title>
+
+<para>Aby odszyfrować plik:</para>
+<orderedlist>
+<listitem><para>Kliknij <menuchoice><guimenu>Plik</guimenu><guimenuitem>Odszyfruj plik...</guimenuitem></menuchoice> lub użyj przycisku na pasku narzędzi.</para></listitem>
+<listitem><para>Wybierz jeden lub więcej zaszyfrowanych plików (<filename>.pgp</filename>, <filename>.gpg</filename> lub <filename>.asc</filename>).</para></listitem>
+<listitem><para>Jeśli zostaniesz poproszony, podaj hasło do klucza GPG.</para></listitem>
+<listitem><para>Odszyfrowany plik pojawi się na liście z oryginalną nazwą, rozmiarem, kluczem użytym do deszyfrowania i znacznikiem czasu.</para></listitem>
+</orderedlist>
+
+<para>Możesz również otwierać zaszyfrowane pliki bezpośrednio, klikając je dwukrotnie w Dolphinie, jeśli &kdecrypt; jest ustawiony jako domyślna aplikacja dla plików PGP.</para>
+
+<para>Jeśli deszyfrowanie nie powiedzie się z powodu braku odpowiedniego klucza tajnego, &kdecrypt; pokaże, dla jakich kluczy plik został zaszyfrowany, i zaoferuje przycisk <guibutton>Importuj klucz...</guibutton>. Po zaimportowaniu klucza deszyfrowanie zostanie automatycznie ponowione.</para>
+
+<sect2 id="drag-and-drop">
+<title>Przeciąganie i upuszczanie</title>
+
+<para>Możesz przeciągać zaszyfrowane pliki z Dolphina lub innego menedżera plików bezpośrednio do okna &kdecrypt;. Upuszczone pliki są natychmiast odszyfrowywane, tak samo jak przy otwieraniu przez menu.</para>
+</sect2>
+
+<sect2 id="decrypted-files">
+<title>Praca z odszyfrowanymi plikami</title>
+
+<para>Po odszyfrowaniu pliku możesz:</para>
+<itemizedlist>
+<listitem><para><emphasis>Kliknąć dwukrotnie</emphasis> lub użyć <menuchoice><guimenuitem>Otwórz domyślną aplikacją</guimenuitem></menuchoice>, aby wyświetlić plik w odpowiedniej aplikacji.</para></listitem>
+<listitem><para>Użyć <menuchoice><guimenuitem>Zapisz odszyfrowany...</guimenuitem></menuchoice> (<keycombo action="simul">&Ctrl;<keycap>S</keycap></keycombo>), aby zapisać odszyfrowany plik na dysku.</para></listitem>
+<listitem><para>Użyć <menuchoice><guimenuitem>Usuń z listy</guimenuitem></menuchoice> (<keycap>Delete</keycap>), aby usunąć pojedynczy plik.</para></listitem>
+<listitem><para>Użyć <menuchoice><guimenuitem>Wyczyść wszystko</guimenuitem></menuchoice>, aby usunąć wszystkie pliki z listy.</para></listitem>
+</itemizedlist>
+
+<para>Odszyfrowane pliki pozostają na liście, dopóki nie zostaną ręcznie usunięte. Dane odszyfrowane przechowywane są wyłącznie w pamięci i nie są zapisywane na dysku, chyba że to wyraźnie zrobisz.</para>
+</sect2>
+</sect1>
+
+<sect1 id="remember-files">
+<title>Zapamiętywanie plików między sesjami</title>
+
+<para>&kdecrypt; może zapamiętać, które zaszyfrowane pliki były otwarte przy zamykaniu aplikacji. Po włączeniu tej opcji lista plików jest przywracana przy następnym uruchomieniu, a pliki są automatycznie ponownie odszyfrowywane.</para>
+
+<para>Opcję tę można przełączyć w <menuchoice><guimenu>Ustawienia</guimenu><guimenuitem>Ustawienia...</guimenuitem></menuchoice>. Po włączeniu ścieżki zaszyfrowanych plików są zapisywane w konfiguracji aplikacji. Odszyfrowana zawartość nigdy nie jest zapisywana na dysku.</para>
+</sect1>
+
+<sect1 id="encrypting">
+<title>Szyfrowanie plików</title>
+
+<para>Aby zaszyfrować plik:</para>
+<orderedlist>
+<listitem><para>Kliknij <menuchoice><guimenu>Plik</guimenu><guimenuitem>Zaszyfruj plik...</guimenuitem></menuchoice> lub naciśnij <keycombo action="simul">&Ctrl;<keycap>E</keycap></keycombo>.</para></listitem>
+<listitem><para>Wybierz plik do zaszyfrowania.</para></listitem>
+<listitem><para>W oknie szyfrowania zaznacz odbiorców (klucze publiczne), którzy będą mogli odszyfrować plik.</para></listitem>
+<listitem><para>Opcjonalnie wybierz klucz do podpisania zaszyfrowanego pliku.</para></listitem>
+<listitem><para>Opcjonalnie włącz <guilabel>Wyjście ASCII armor</guilabel>, aby utworzyć plik tekstowy <filename>.asc</filename> zamiast binarnego <filename>.gpg</filename>.</para></listitem>
+<listitem><para>Kliknij <guibutton>Zaszyfruj</guibutton>.</para></listitem>
+</orderedlist>
+
+<para>Zaszyfrowany plik zostanie utworzony w tym samym katalogu co plik oryginalny.</para>
+</sect1>
+
+<sect1 id="key-manager">
+<title>Menedżer kluczy</title>
+
+<para>Otwórz Menedżer kluczy przez <menuchoice><guimenu>Ustawienia</guimenu><guimenuitem>Menedżer kluczy...</guimenuitem></menuchoice> lub naciśnij <keycombo action="simul">&Ctrl;<keycap>K</keycap></keycombo>.</para>
+
+<para>Menedżer kluczy wyświetla wszystkie klucze prywatne w Twoim keyring GPG i oferuje następujące operacje:</para>
+
+<sect2 id="key-generate">
+<title>Generowanie kluczy</title>
+<para>Kliknij <guibutton>Generuj...</guibutton>, aby utworzyć nową parę kluczy GPG. Możesz skonfigurować:</para>
+<itemizedlist>
+<listitem><para><emphasis>Tożsamość</emphasis>: imię i nazwisko, adres email i opcjonalny komentarz.</para></listitem>
+<listitem><para><emphasis>Typ klucza</emphasis>: EdDSA (Ed25519), RSA, ECDSA (NIST P-256/P-384/P-521) lub DSA.</para></listitem>
+<listitem><para><emphasis>Rozmiar klucza</emphasis>: dla RSA i DSA, wybierz spośród standardowych rozmiarów (2048, 3072, 4096 bitów). Klucze krzywych eliptycznych mają stały rozmiar.</para></listitem>
+<listitem><para><emphasis>Typ podklucza</emphasis>: ECDH (Curve25519), RSA, ECDH (krzywe NIST), ElGamal lub brak.</para></listitem>
+<listitem><para><emphasis>Wygaśnięcie</emphasis>: ustaw datę wygaśnięcia lub wybierz brak wygaśnięcia.</para></listitem>
+<listitem><para><emphasis>Hasło</emphasis>: zabezpiecz swój klucz hasłem.</para></listitem>
+</itemizedlist>
+</sect2>
+
+<sect2 id="key-import-export">
+<title>Import i eksport kluczy</title>
+<para><guibutton>Importuj...</guibutton> wczytuje klucz z pliku (<filename>.asc</filename>, <filename>.gpg</filename>, <filename>.pgp</filename>, <filename>.key</filename>) do keyring GPG.</para>
+<para><guibutton>Eksportuj...</guibutton> zapisuje klucz do pliku. Możesz wybrać eksport samego klucza publicznego lub obu kluczy: publicznego i prywatnego.</para>
+</sect2>
+
+<sect2 id="key-other">
+<title>Pozostałe operacje</title>
+<itemizedlist>
+<listitem><para><guibutton>Szczegóły...</guibutton> pokazuje pełne dane klucza GPG, w tym odciski palców i podklucze.</para></listitem>
+<listitem><para><guibutton>Zmień hasło...</guibutton> otwiera okno pinentry GPG do zmiany hasła klucza.</para></listitem>
+<listitem><para><guibutton>Usuń</guibutton> usuwa zarówno klucz publiczny, jak i prywatny z keyringa po potwierdzeniu.</para></listitem>
+</itemizedlist>
+</sect2>
+</sect1>
+
+<sect1 id="wallet">
+<title>Integracja z portfelem KDE</title>
+
+<para>&kdecrypt; może przechowywać hasło GPG w portfelu KDE, dzięki czemu nie trzeba go podawać za każdym razem. Kontroluje to opcja <guilabel>Przechowuj hasło w portfelu KDE</guilabel> w Menedżerze kluczy.</para>
+
+<para>Gdy jest włączona, przy pierwszym podaniu hasła zostanie ono zapisane w portfelu. Przy kolejnych deszyfrowaniach hasło będzie pobierane automatycznie.</para>
+</sect1>
+
+<sect1 id="language-switching">
+<title>Przełączanie języka</title>
+
+<para>&kdecrypt; umożliwia zmianę języka interfejsu bez zmiany ustawień systemowych. Użyj <menuchoice><guimenu>Ustawienia</guimenu><guimenuitem>Zmień język...</guimenuitem></menuchoice>, aby wybrać inny język. Zmiana zostanie zastosowana po ponownym uruchomieniu aplikacji.</para>
+</sect1>
+
+</chapter>
+
+<chapter id="security">
+<title>Bezpieczeństwo</title>
+
+<para>&kdecrypt; stosuje kilka środków ochrony wrażliwych danych:</para>
+
+<itemizedlist>
+<listitem><para><emphasis>Szyfrowanie w pamięci</emphasis>: Odszyfrowana zawartość plików jest przechowywana w pamięci z użyciem szyfrowania uwierzytelnionego AES-256-GCM. Losowy klucz jest generowany przy starcie i przechowywany wyłącznie w pamięci procesu. Chroni to przed zrzutami pamięci i wyciekami przez plik wymiany.</para></listitem>
+<listitem><para><emphasis>Bezpieczne wymazywanie</emphasis>: Gdy pliki są usuwane z listy lub aplikacja kończy pracę, bufory z odszyfrowanymi danymi są nadpisywane zerami przed zwolnieniem.</para></listitem>
+<listitem><para><emphasis>Brak plików tymczasowych</emphasis>: Odszyfrowane dane nigdy nie są zapisywane na dysku, chyba że użytkownik wyraźnie wybierze <guimenuitem>Zapisz odszyfrowany...</guimenuitem>.</para></listitem>
+<listitem><para><emphasis>Obsługa haseł</emphasis>: Hasła są przekazywane do GPG przez deskryptor pliku, nigdy przez argumenty wiersza poleceń.</para></listitem>
+</itemizedlist>
+</chapter>
+
+<chapter id="commands">
+<title>Skróty klawiszowe</title>
+
+<informaltable>
+<tgroup cols="2">
+<thead>
+<row><entry>Skrót</entry><entry>Działanie</entry></row>
+</thead>
+<tbody>
+<row><entry><keycombo action="simul">&Ctrl;<keycap>O</keycap></keycombo></entry><entry>Odszyfruj plik</entry></row>
+<row><entry><keycombo action="simul">&Ctrl;<keycap>E</keycap></keycombo></entry><entry>Zaszyfruj plik</entry></row>
+<row><entry><keycombo action="simul">&Ctrl;<keycap>K</keycap></keycombo></entry><entry>Menedżer kluczy</entry></row>
+<row><entry><keycombo action="simul">&Ctrl;<keycap>S</keycap></keycombo></entry><entry>Zapisz odszyfrowany plik</entry></row>
+<row><entry><keycap>Return</keycap></entry><entry>Otwórz odszyfrowany plik domyślną aplikacją</entry></row>
+<row><entry><keycap>Delete</keycap></entry><entry>Usuń plik z listy</entry></row>
+<row><entry><keycombo action="simul">&Ctrl;<keycap>Q</keycap></keycombo></entry><entry>Zakończ</entry></row>
+</tbody>
+</tgroup>
+</informaltable>
+</chapter>
+
+<chapter id="credits">
+<title>Podziękowania i licencja</title>
+
+<para>&kdecrypt;</para>
+<para>Prawa autorskie do programu &copy; 2026 Guid <email>guid@guid.pl</email></para>
+<para>Strona projektu: <ulink url="https://github.com/Guid-Lab/kdecrypt">github.com/Guid-Lab/kdecrypt</ulink></para>
+<para>Zgłaszanie błędów: <ulink url="https://github.com/Guid-Lab/kdecrypt/issues">github.com/Guid-Lab/kdecrypt/issues</ulink></para>
+
+&underFDL;
+&underGPL;
+
+</chapter>
+
+</book>

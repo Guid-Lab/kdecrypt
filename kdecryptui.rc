@@ -1,0 +1,36 @@
+<!-- SPDX-FileCopyrightText: 2026 Guid <guid@guid.pl> -->
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<!DOCTYPE gui SYSTEM "kpartgui.dtd">
+<gui name="kdecrypt" version="4">
+  <MenuBar>
+    <Menu name="file">
+      <Action name="file_open"/>
+      <Action name="encrypt_file"/>
+      <Separator/>
+      <Action name="save_decrypted"/>
+      <Action name="open_decrypted"/>
+      <Separator/>
+      <Action name="remove_item"/>
+      <Action name="clear_all"/>
+      <Separator/>
+      <Action name="file_quit"/>
+    </Menu>
+    <Menu name="settings">
+      <Action name="key_manager"/>
+      <Action name="switch_language"/>
+    </Menu>
+  </MenuBar>
+  <ToolBar name="mainToolBar" noMerge="1">
+    <text>Main Toolbar</text>
+    <Action name="file_open"/>
+    <Action name="encrypt_file"/>
+    <Separator/>
+    <Action name="key_manager"/>
+    <Separator/>
+    <Action name="save_decrypted"/>
+    <Action name="open_decrypted"/>
+    <Separator/>
+    <Action name="remove_item"/>
+    <Action name="clear_all"/>
+  </ToolBar>
+</gui>

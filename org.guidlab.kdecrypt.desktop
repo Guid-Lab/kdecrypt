@@ -1,0 +1,24 @@
+[Desktop Entry]
+Type=Application
+Name=KDecrypt
+Name[pl]=KDecrypt
+GenericName=PGP File Manager
+GenericName[pl]=Menedżer plików PGP
+GenericName[de]=PGP-Dateimanager
+GenericName[fr]=Gestionnaire de fichiers PGP
+GenericName[zh_CN]=PGP 文件管理器
+GenericName[ja]=PGPファイルマネージャー
+Comment=Encrypt, decrypt, and manage PGP/GPG files and keys
+Comment[pl]=Szyfrowanie, deszyfrowanie i zarządzanie plikami i kluczami PGP/GPG
+Comment[de]=PGP/GPG-Dateien und Schlüssel verschlüsseln, entschlüsseln und verwalten
+Comment[fr]=Chiffrer, déchiffrer et gérer les fichiers et clés PGP/GPG
+Comment[zh_CN]=加密、解密和管理 PGP/GPG 文件与密钥
+Comment[ja]=PGP/GPGファイルと鍵の暗号化・復号・管理
+Exec=kdecrypt %F
+Icon=kdecrypt
+Terminal=false
+StartupNotify=true
+Categories=Qt;KDE;Utility;Security;
+MimeType=application/pgp-encrypted;application/pgp;application/pgp-keys;application/pgp-signature;application/x-pgp-encrypted-key;
+X-KDE-Keywords=pgp,gpg,encrypt,decrypt,keys,security,crypto
+X-KDE-Keywords[pl]=pgp,gpg,szyfrowanie,deszyfrowanie,klucze,bezpieczeństwo,krypto

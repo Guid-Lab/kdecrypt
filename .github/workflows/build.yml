@@ -1,0 +1,141 @@
+name: Build & Release
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-arch:
+    name: Arch Linux
+    runs-on: ubuntu-latest
+    container: archlinux:latest
+    steps:
+      - name: Install dependencies
+        run: |
+          pacman -Syu --noconfirm
+          pacman -S --noconfirm base-devel cmake extra-cmake-modules git \
+            qt6-base qt6-tools \
+            kcoreaddons ki18n kxmlgui kwidgetsaddons \
+            kwallet kdoctools kdbusaddons kwindowsystem openssl gettext
+
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: |
+          cmake -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
+          cmake --build build
+
+      - name: Package
+        run: |
+          DESTDIR=pkg cmake --install build
+          cd pkg
+          tar czf ../kdecrypt-${{ github.ref_name }}-arch-x86_64.tar.gz .
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: arch-package
+          path: kdecrypt-*-arch-x86_64.tar.gz
+
+  build-debian:
+    name: Debian/Ubuntu
+    runs-on: ubuntu-latest
+    container: invent-registry.kde.org/neon/docker-images/plasma:unstable
+    steps:
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake extra-cmake-modules gettext \
+            qt6-base-dev qt6-tools-dev qt6-l10n-tools \
+            libkf6coreaddons-dev libkf6i18n-dev libkf6xmlgui-dev \
+            libkf6widgetsaddons-dev libkf6wallet-dev \
+            libkf6dbusaddons-dev libkf6windowsystem-dev \
+            libkf6doctools-dev libssl-dev
+
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: |
+          cmake -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
+          cmake --build build
+
+      - name: Create .deb
+        run: |
+          DESTDIR=debian/kdecrypt cmake --install build
+          mkdir -p debian/kdecrypt/DEBIAN
+          VERSION=$(grep 'project(kdecrypt VERSION' CMakeLists.txt | grep -oP '[0-9]+\.[0-9]+\.[0-9]+')
+          cat > debian/kdecrypt/DEBIAN/control << EOF
+          Package: kdecrypt
+          Version: ${VERSION}
+          Section: utils
+          Priority: optional
+          Architecture: amd64
+          Depends: gnupg, kwalletmanager, khelpcenter
+          Maintainer: Guid <guid@guid.pl>
+          Homepage: https://github.com/Guid-Lab/kdecrypt
+          Description: PGP/GPG file encryption and decryption manager for KDE Plasma
+           KDecrypt provides a graphical interface for encrypting, decrypting,
+           and managing PGP/GPG files and keys with KDE Wallet integration.
+          EOF
+          sed -i 's/^          //' debian/kdecrypt/DEBIAN/control
+          dpkg-deb --build debian/kdecrypt
+          mv debian/kdecrypt.deb kdecrypt-${VERSION}-amd64.deb
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: deb-package
+          path: kdecrypt-*.deb
+
+  build-fedora:
+    name: Fedora
+    runs-on: ubuntu-latest
+    container: fedora:latest
+    steps:
+      - name: Install dependencies
+        run: |
+          dnf install -y cmake extra-cmake-modules gcc-c++ git gettext \
+            qt6-qtbase-devel qt6-qttools-devel \
+            kf6-kcoreaddons-devel kf6-ki18n-devel kf6-kxmlgui-devel \
+            kf6-kwidgetsaddons-devel kf6-kwallet-devel \
+            kf6-kdbusaddons-devel kf6-kwindowsystem-devel \
+            kf6-kdoctools-devel openssl-devel rpm-build
+
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: |
+          cmake -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
+          cmake --build build
+
+      - name: Package
+        run: |
+          DESTDIR=pkg cmake --install build
+          cd pkg
+          tar czf ../kdecrypt-${{ github.ref_name }}-fedora-x86_64.tar.gz .
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fedora-package
+          path: kdecrypt-*-fedora-x86_64.tar.gz
+
+  release:
+    name: Create Release
+    needs: [build-arch, build-debian, build-fedora]
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v')
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          merge-multiple: true
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: |
+            kdecrypt-*.tar.gz
+            kdecrypt-*.deb

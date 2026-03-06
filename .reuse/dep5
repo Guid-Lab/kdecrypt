@@ -1,0 +1,37 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+
+Files: icons/*
+Copyright: 2026 Guid <guid@guid.pl>
+License: GPL-3.0-or-later
+
+Files: screenshots/*
+Copyright: 2026 Guid <guid@guid.pl>
+License: GPL-3.0-or-later
+
+Files: po/*
+Copyright: 2026 Guid <guid@guid.pl>
+License: GPL-3.0-or-later
+
+Files: doc/*
+Copyright: 2026 Guid <guid@guid.pl>
+License: GPL-3.0-or-later
+
+Files: .gitignore .clang-format
+Copyright: 2026 Guid <guid@guid.pl>
+License: GPL-3.0-or-later
+
+Files: packaging/*
+Copyright: 2026 Guid <guid@guid.pl>
+License: GPL-3.0-or-later
+
+Files: README.md
+Copyright: 2026 Guid <guid@guid.pl>
+License: GPL-3.0-or-later
+
+Files: *.desktop
+Copyright: 2026 Guid <guid@guid.pl>
+License: GPL-3.0-or-later
+
+Files: .github/*
+Copyright: 2026 Guid <guid@guid.pl>
+License: GPL-3.0-or-later
