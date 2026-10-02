@@ -30,9 +30,9 @@ jobs:
 
       - name: Package
         run: |
+          VERSION=$(grep 'project(kdecrypt VERSION' CMakeLists.txt | grep -oP '[0-9]+\.[0-9]+\.[0-9]+')
           DESTDIR=pkg cmake --install build
-          cd pkg
-          tar czf ../kdecrypt-${{ github.ref_name }}-arch-x86_64.tar.gz .
+          tar czf kdecrypt-${VERSION}-arch-x86_64.tar.gz -C pkg .
 
       - uses: actions/upload-artifact@v4
         with:
@@ -111,9 +111,9 @@ jobs:
 
       - name: Package
         run: |
+          VERSION=$(grep 'project(kdecrypt VERSION' CMakeLists.txt | grep -oP '[0-9]+\.[0-9]+\.[0-9]+')
           DESTDIR=pkg cmake --install build
-          cd pkg
-          tar czf ../kdecrypt-${{ github.ref_name }}-fedora-x86_64.tar.gz .
+          tar czf kdecrypt-${VERSION}-fedora-x86_64.tar.gz -C pkg .
 
       - uses: actions/upload-artifact@v4
         with:

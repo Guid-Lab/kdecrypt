@@ -19,6 +19,8 @@ include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMInstallIcons)
 include(FeatureSummary)
 
+option(BUILD_DOCS "Build and install the handbook documentation" ON)
+
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
 find_package(OpenSSL REQUIRED)
 find_package(KF6 REQUIRED COMPONENTS
@@ -29,8 +31,11 @@ find_package(KF6 REQUIRED COMPONENTS
     WidgetsAddons
     Wallet
     WindowSystem
-    DocTools
 )
+
+if(BUILD_DOCS)
+    find_package(KF6 REQUIRED COMPONENTS DocTools)
+endif()
 
 configure_file(src/version.h.in ${CMAKE_BINARY_DIR}/version.h @ONLY)
 
@@ -70,8 +75,10 @@ target_link_libraries(kdecrypt PRIVATE
     OpenSSL::Crypto
 )
 
-kdoctools_create_handbook(doc/en/index.docbook INSTALL_DESTINATION ${KDE_INSTALL_DOCBUNDLEDIR}/en SUBDIR kdecrypt)
-kdoctools_create_handbook(doc/pl/index.docbook INSTALL_DESTINATION ${KDE_INSTALL_DOCBUNDLEDIR}/pl SUBDIR kdecrypt)
+if(BUILD_DOCS)
+    kdoctools_create_handbook(doc/en/index.docbook INSTALL_DESTINATION ${KDE_INSTALL_DOCBUNDLEDIR}/en SUBDIR kdecrypt)
+    kdoctools_create_handbook(doc/pl/index.docbook INSTALL_DESTINATION ${KDE_INSTALL_DOCBUNDLEDIR}/pl SUBDIR kdecrypt)
+endif()
 
 ki18n_install(po)
 
