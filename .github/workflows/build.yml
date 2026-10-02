@@ -21,7 +21,7 @@ jobs:
             kcoreaddons ki18n kxmlgui kwidgetsaddons \
             kwallet kdoctools kdbusaddons kwindowsystem openssl gettext
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Build
         run: |
@@ -34,7 +34,7 @@ jobs:
           DESTDIR=pkg cmake --install build
           tar czf kdecrypt-${VERSION}-arch-x86_64.tar.gz -C pkg .
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: arch-package
           path: kdecrypt-*-arch-x86_64.tar.gz
@@ -54,7 +54,7 @@ jobs:
             libkf6dbusaddons-dev libkf6windowsystem-dev \
             libkf6doctools-dev libssl-dev
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Build
         run: |
@@ -83,7 +83,7 @@ jobs:
           dpkg-deb --build debian/kdecrypt
           mv debian/kdecrypt.deb kdecrypt-${VERSION}-amd64.deb
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: deb-package
           path: kdecrypt-*.deb
@@ -102,7 +102,7 @@ jobs:
             kf6-kdbusaddons-devel kf6-kwindowsystem-devel \
             kf6-kdoctools-devel openssl-devel rpm-build
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Build
         run: |
@@ -115,7 +115,7 @@ jobs:
           DESTDIR=pkg cmake --install build
           tar czf kdecrypt-${VERSION}-fedora-x86_64.tar.gz -C pkg .
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: fedora-package
           path: kdecrypt-*-fedora-x86_64.tar.gz
@@ -128,7 +128,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           merge-multiple: true
 
