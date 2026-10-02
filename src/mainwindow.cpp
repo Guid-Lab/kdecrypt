@@ -367,6 +367,20 @@ void MainWindow::onEncryptFile()
     if (file.isEmpty())
         return;
 
+    encryptFile(file);
+}
+
+void MainWindow::encryptFile(const QString &file)
+{
+    if (file.isEmpty())
+        return;
+
+    if (!QFileInfo::exists(file)) {
+        QMessageBox::warning(this, i18n("Error"),
+                             i18n("File does not exist:\n%1", file));
+        return;
+    }
+
     EncryptDialog dlg(this);
     if (dlg.exec() != QDialog::Accepted)
         return;

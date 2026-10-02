@@ -24,6 +24,7 @@ public:
     ~MainWindow() override;
 
     void openFile(const QString &path, const QDateTime &originalTime = {});
+    void encryptFile(const QString &path);
 
 protected:
     void closeEvent(QCloseEvent *event) override;

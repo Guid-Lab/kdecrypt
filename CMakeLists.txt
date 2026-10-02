@@ -87,6 +87,12 @@ install(FILES org.guidlab.kdecrypt.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES kdecryptui.rc DESTINATION ${KDE_INSTALL_KXMLGUIDIR}/kdecrypt)
 install(FILES org.guidlab.kdecrypt.metainfo.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
+install(PROGRAMS
+    servicemenus/kdecrypt-encrypt.desktop
+    servicemenus/kdecrypt-decrypt.desktop
+    DESTINATION ${KDE_INSTALL_DATADIR}/kio/servicemenus
+)
+
 ecm_install_icons(ICONS
     icons/16-apps-kdecrypt.png
     icons/22-apps-kdecrypt.png

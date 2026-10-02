@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2026 Guid <guid@guid.pl>
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+[Desktop Entry]
+Type=Application
+Name=Encrypt with KDecrypt
+MimeType=all/allfiles;
+Actions=encryptWithKdecrypt;
+X-KDE-Priority=TopLevel
+
+[Desktop Action encryptWithKdecrypt]
+Name=Encrypt with KDecrypt
+Name[pl]=Zaszyfruj przez KDecrypt
+Name[de]=Mit KDecrypt verschlüsseln
+Name[fr]=Chiffrer avec KDecrypt
+Name[zh_CN]=使用 KDecrypt 加密
+Name[ja]=KDecrypt で暗号化
+Icon=document-encrypt
+Exec=kdecrypt --encrypt %F

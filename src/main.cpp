@@ -3,6 +3,7 @@
 
 #include <QApplication>
 #include <QCommandLineParser>
+#include <QCommandLineOption>
 #include <QSettings>
 #include <QStandardPaths>
 #include <KAboutData>
@@ -49,9 +50,13 @@ int main(int argc, char *argv[])
 
     QCommandLineParser parser;
     aboutData.setupCommandLine(&parser);
+    QCommandLineOption encryptOption(
+        {QStringLiteral("e"), QStringLiteral("encrypt")},
+        i18n("Encrypt the given file(s) instead of opening them for decryption"));
+    parser.addOption(encryptOption);
     parser.addPositionalArgument(
         QStringLiteral("files"),
-        i18n("Encrypted files to open"),
+        i18n("Files to open for decryption, or to encrypt with --encrypt"),
         QStringLiteral("[files...]")
     );
     parser.process(app);
@@ -61,28 +66,28 @@ int main(int argc, char *argv[])
 
     MainWindow window;
 
-    auto openFilesFromArgs = [&window, &parser]() {
-        const QStringList files = parser.positionalArguments();
-        for (const auto &f : files)
-            window.openFile(f);
+    auto dispatch = [&window](const QStringList &files, bool encrypt) {
+        for (const auto &f : files) {
+            if (encrypt)
+                window.encryptFile(f);
+            else
+                window.openFile(f);
+        }
         window.show();
         window.raise();
         KWindowSystem::activateWindow(window.windowHandle());
     };
 
     QObject::connect(&service, &KDBusService::activateRequested,
-                     &window, [&window](const QStringList &args, const QString &) {
+                     &window, [&dispatch](const QStringList &args, const QString &) {
         QCommandLineParser p;
+        QCommandLineOption e({QStringLiteral("e"), QStringLiteral("encrypt")}, QString());
+        p.addOption(e);
         p.addPositionalArgument(QStringLiteral("files"), QString(), QStringLiteral("[files...]"));
         p.parse(args);
-        const QStringList files = p.positionalArguments();
-        for (const auto &f : files)
-            window.openFile(f);
-        window.show();
-        window.raise();
-        KWindowSystem::activateWindow(window.windowHandle());
+        dispatch(p.positionalArguments(), p.isSet(e));
     });
 
-    openFilesFromArgs();
+    dispatch(parser.positionalArguments(), parser.isSet(encryptOption));
     return app.exec();
 }
