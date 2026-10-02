@@ -125,8 +125,17 @@ flatpak install flathub org.kde.Platform//6.10 org.kde.Sdk//6.10
 flatpak-builder --user --install --force-clean build-flatpak flatpak/org.guidlab.kdecrypt.yaml
 ```
 
-The Dolphin right-click integration below is part of the native install; the
-Flatpak ships the application itself.
+Flatpak cannot export Dolphin service menus, so to get the right-click
+Encrypt/Decrypt actions with the Flatpak, install the host-side menus (they call
+`flatpak run`):
+
+```bash
+cp flatpak/servicemenus-host/*.desktop ~/.local/share/kio/servicemenus/
+kbuildsycoca6
+```
+
+Files must be under your home directory, since the sandbox is granted
+`--filesystem=home`.
 
 ## Usage
 
