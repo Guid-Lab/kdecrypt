@@ -1,0 +1,24 @@
+# SPDX-FileCopyrightText: 2026 Guid <guid@guid.pl>
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Dolphin right-click integration for the Flatpak build. Flatpak does not export
+# service menus, so install this on the host:
+#   cp flatpak/servicemenus-host/*.desktop ~/.local/share/kio/servicemenus/
+#   kbuildsycoca6
+
+[Desktop Entry]
+Type=Application
+Name=Decrypt with KDecrypt
+MimeType=application/pgp-encrypted;application/pgp;application/pgp-keys;application/pgp-signature;
+Actions=decryptWithKdecrypt;
+X-KDE-Priority=TopLevel
+
+[Desktop Action decryptWithKdecrypt]
+Name=Decrypt with KDecrypt
+Name[pl]=Odszyfruj przez KDecrypt
+Name[de]=Mit KDecrypt entschlüsseln
+Name[fr]=Déchiffrer avec KDecrypt
+Name[zh_CN]=使用 KDecrypt 解密
+Name[ja]=KDecrypt で復号
+Icon=document-decrypt
+Exec=flatpak run org.guidlab.kdecrypt %F

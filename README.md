@@ -104,6 +104,39 @@ cmake --build build
 sudo cmake --install build
 ```
 
+## Flatpak
+
+A Flatpak manifest is provided in `flatpak/`. GnuPG (`gpg`, `gpg-agent`) comes
+from the KDE runtime, so nothing extra is bundled; the sandbox is granted access
+to your home directory (files to process and the `~/.gnupg` keyring) and to
+KWallet.
+
+Prebuilt bundle (from the [Releases](https://github.com/Guid-Lab/kdecrypt/releases) page):
+
+```bash
+flatpak install kdecrypt.flatpak
+flatpak run org.guidlab.kdecrypt
+```
+
+Build it yourself:
+
+```bash
+flatpak install flathub org.kde.Platform//6.10 org.kde.Sdk//6.10
+flatpak-builder --user --install --force-clean build-flatpak flatpak/org.guidlab.kdecrypt.yaml
+```
+
+Flatpak cannot export Dolphin service menus, so to get the right-click
+Encrypt/Decrypt actions with the Flatpak, install the host-side menus (they call
+`flatpak run`):
+
+```bash
+cp flatpak/servicemenus-host/*.desktop ~/.local/share/kio/servicemenus/
+kbuildsycoca6
+```
+
+Files must be under your home directory, since the sandbox is granted
+`--filesystem=home`.
+
 ## Usage
 
 Launch KDecrypt from the application menu or run `kdecrypt` from the terminal.
@@ -118,7 +151,12 @@ Launch KDecrypt from the application menu or run `kdecrypt` from the terminal.
 | Delete | Remove from list |
 | F1 | Open handbook |
 
-You can also associate `.pgp`/`.gpg` files with KDecrypt in Dolphin for one-click decryption, or drag encrypted files directly onto the window.
+### Dolphin integration
+
+After a native install, Dolphin's right-click menu gains **Encrypt with KDecrypt**
+(on any file) and **Decrypt with KDecrypt** (on `.pgp`/`.gpg`/`.asc` files). You
+can also associate encrypted files with KDecrypt for one-click decryption, or drag
+them directly onto the window.
 
 ## License
 
