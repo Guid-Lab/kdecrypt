@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.20)
 
-project(kdecrypt VERSION 1.0.1 LANGUAGES CXX)
+project(kdecrypt VERSION 1.0.2 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -83,9 +83,9 @@ endif()
 ki18n_install(po)
 
 install(TARGETS kdecrypt DESTINATION ${KDE_INSTALL_BINDIR})
-install(FILES org.guidlab.kdecrypt.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(FILES pl.guidlab.kdecrypt.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES kdecryptui.rc DESTINATION ${KDE_INSTALL_KXMLGUIDIR}/kdecrypt)
-install(FILES org.guidlab.kdecrypt.metainfo.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
+install(FILES pl.guidlab.kdecrypt.metainfo.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
 install(PROGRAMS
     servicemenus/kdecrypt-encrypt.desktop

@@ -42,11 +42,11 @@ int main(int argc, char *argv[])
         QStringLiteral("guid@guid.pl"),
         QStringLiteral("https://github.com/Guid-Lab")
     );
-    // Keep the D-Bus service name equal to the app-id (org.guidlab.kdecrypt).
+    // Keep the D-Bus service name equal to the app-id (pl.guidlab.kdecrypt).
     // KDBusService derives it from the organization domain, and under Flatpak an
     // app may only own its app-id on the session bus.
-    aboutData.setOrganizationDomain("guidlab.org");
-    aboutData.setDesktopFileName(QStringLiteral("org.guidlab.kdecrypt"));
+    aboutData.setOrganizationDomain("guidlab.pl");
+    aboutData.setDesktopFileName(QStringLiteral("pl.guidlab.kdecrypt"));
 
     KAboutData::setApplicationData(aboutData);
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("kdecrypt")));

@@ -21,4 +21,4 @@ Name[fr]=Chiffrer avec KDecrypt
 Name[zh_CN]=使用 KDecrypt 加密
 Name[ja]=KDecrypt で暗号化
 Icon=document-encrypt
-Exec=flatpak run org.guidlab.kdecrypt --encrypt %F
+Exec=flatpak run pl.guidlab.kdecrypt --encrypt %F

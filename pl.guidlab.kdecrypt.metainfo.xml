@@ -2,7 +2,7 @@
 <!-- SPDX-FileCopyrightText: 2026 Guid <guid@guid.pl> -->
 <!-- SPDX-License-Identifier: FSFAP -->
 <component type="desktop-application">
-  <id>org.guidlab.kdecrypt</id>
+  <id>pl.guidlab.kdecrypt</id>
   <metadata_license>FSFAP</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
   <name>KDecrypt</name>
@@ -31,7 +31,7 @@
     <name>Guid</name>
     <url>https://github.com/Guid-Lab</url>
   </developer>
-  <launchable type="desktop-id">org.guidlab.kdecrypt.desktop</launchable>
+  <launchable type="desktop-id">pl.guidlab.kdecrypt.desktop</launchable>
   <provides>
     <binary>kdecrypt</binary>
     <mediatype>application/pgp-encrypted</mediatype>
@@ -50,6 +50,11 @@
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
+    <release version="1.0.2" date="2026-10-02">
+      <description>
+        <p>Application ID changed to pl.guidlab.kdecrypt for Flathub.</p>
+      </description>
+    </release>
     <release version="1.0.1" date="2026-10-02">
       <description>
         <p>Dolphin right-click Encrypt/Decrypt integration, optional documentation build, and a Flatpak manifest.</p>

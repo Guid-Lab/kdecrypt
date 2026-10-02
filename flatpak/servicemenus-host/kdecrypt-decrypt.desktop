@@ -21,4 +21,4 @@ Name[fr]=Déchiffrer avec KDecrypt
 Name[zh_CN]=使用 KDecrypt 解密
 Name[ja]=KDecrypt で復号
 Icon=document-decrypt
-Exec=flatpak run org.guidlab.kdecrypt %F
+Exec=flatpak run pl.guidlab.kdecrypt %F
