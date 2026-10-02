@@ -50,6 +50,11 @@
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
+    <release version="1.0.1" date="2026-10-02">
+      <description>
+        <p>Dolphin right-click Encrypt/Decrypt integration, optional documentation build, and a Flatpak manifest.</p>
+      </description>
+    </release>
     <release version="1.0.0" date="2026-03-06">
       <description>
         <p>Added built-in handbook, remember files option, import key on decryption failure.</p>
