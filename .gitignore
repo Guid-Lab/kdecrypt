@@ -3,3 +3,6 @@ build-scan/
 .cache/
 CMakeUserPresets.json
 compile_commands.json
+build-*/
+builddir-flatpak/
+.flatpak-builder/

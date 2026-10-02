@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2026 Guid <guid@guid.pl>
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-app-id: org.guidlab.kdecrypt
+app-id: pl.guidlab.kdecrypt
 runtime: org.kde.Platform
 runtime-version: '6.10'
 sdk: org.kde.Sdk

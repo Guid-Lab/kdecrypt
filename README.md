@@ -115,14 +115,14 @@ Prebuilt bundle (from the [Releases](https://github.com/Guid-Lab/kdecrypt/releas
 
 ```bash
 flatpak install kdecrypt.flatpak
-flatpak run org.guidlab.kdecrypt
+flatpak run pl.guidlab.kdecrypt
 ```
 
 Build it yourself:
 
 ```bash
 flatpak install flathub org.kde.Platform//6.10 org.kde.Sdk//6.10
-flatpak-builder --user --install --force-clean build-flatpak flatpak/org.guidlab.kdecrypt.yaml
+flatpak-builder --user --install --force-clean build-flatpak flatpak/pl.guidlab.kdecrypt.yaml
 ```
 
 Flatpak cannot export Dolphin service menus, so to get the right-click
